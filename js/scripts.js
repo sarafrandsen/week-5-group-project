@@ -29,12 +29,17 @@ var command = function(actionSelect, typedObject, newUser){
 }
 
 
-
 var displayLevel = function(newUser) {
   return levelArray[newUser.level].info;
 }
 
 
+// input name to variable name
+var userInputConversion = function(userObjectInput) {
+  if (userObjectInput === "weary-man"){
+    return "levelOneWearyMan";
+  }
+}
 
 //front-end
 $(document).ready(function() {
@@ -45,6 +50,8 @@ $(document).ready(function() {
 
     var inputName = $("#user-name-input").val();
     var newUser = new User(inputName);
+
+
 
     $(".name-output").text(newUser.userName);
       console.log("This is the current level: " + newUser.level);
@@ -57,9 +64,11 @@ $(document).ready(function() {
 
       var userObjectInput = $("#user-object-input").val();
       var userActionSelect = $("#user-action-select option:selected").val();
+      var convertInput = userInputConversion(userObjectInput);
+      console.log(convertInput);
 
       $("#in-game-text").append("<li> You " + userActionSelect + " " + userObjectInput + "</li>");
-      $("#in-game-text").append(command(userActionSelect, userObjectInput, newUser));
+      $("#in-game-text").append(command(userActionSelect, convertInput, newUser));
       $("#user-object-input").val("");
       $(".name-output").text(newUser.userName);
 
