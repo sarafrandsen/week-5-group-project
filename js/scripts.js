@@ -11,7 +11,7 @@ Object.prototype.info = function() {
 };
 
 
-var Command = function(playerInput){
+var command = function(playerInput){
   if (/^talk/i.test(playerInput)) {
     alert("You've talked");
   } else if (/^info/i.test(playerInput) || /^lookat/i.test(playerInput)) {
@@ -33,13 +33,27 @@ var Command = function(playerInput){
 
 //front-end
 $(document).ready(function() {
-  $("#user-input").submit(function(event){
+
+  // name and character selection
+  $("#user-input").click(function(event){
     event.preventDefault();
 
-    var inputName = $("#user-name").val();
+    var inputName = $("#user-name-input").val();
     var newUser = new User(inputName);
     newUser.level++
-    $(".name-output").text(newUser.name);
+
+    $(".name-output").text(newUser.userName);
+
+  });
+
+  // actual gameplay with user input and game dialogue
+  $("#user-input-text").submit(function(event) {
+    event.preventDefault();
+
+    var userAction = $("#user-action").val();
+
+    $("#in-game-text").append("<li>" + userAction + "</li>");
+    $("#user-action").val("");
 
   })
 });
