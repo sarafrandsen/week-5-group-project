@@ -50,10 +50,11 @@ $(document).ready(function() {
   $("#user-input-text").submit(function(event) {
     event.preventDefault();
 
-    var userAction = $("#user-action").val();
+    var userObjectInput = $("#user-object-input").val();
+    var userActionSelect = $("#user-action-select option:selected").val();
 
-    $("#in-game-text").append("<li>" + userAction + "</li>");
-    $("#user-action").val("");
+    $("#in-game-text").append("<li> You " + userActionSelect + " " + userObjectInput + "</li>");
+    $("#user-object-input").val("");
 
   })
 });

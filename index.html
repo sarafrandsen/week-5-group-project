@@ -53,9 +53,20 @@
             </ul>
           </div>
           <!-- where the user inputs the chat-text -->
-          <div class="user-action-input">
+          <div class="user-object-input">
             <form id="user-input-text">
-              <input type="text" id="user-action">
+              <!-- action select -->
+              <div class="form-group">
+                <select class="form-control" id="user-action-select">
+                  <option class="talk">talk</option>
+                  <option class="pick-up">pick up</option>
+                  <option class="go">go</option>
+                  <option class="run">run</option>
+                </select>
+              </div>
+
+              <!-- object input -->
+              <input type="text" id="user-object-input">
               <button type="submit" name="chat">Send</button>
             </form>
           </div>
