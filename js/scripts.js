@@ -47,7 +47,7 @@ $(document).ready(function() {
     var newUser = new User(inputName);
 
     $(".name-output").text(newUser.userName);
-      newUser.level++
+      console.log("This is the current level: " + newUser.level);
 
       $("#in-game-text").append(displayLevel(newUser));
 
