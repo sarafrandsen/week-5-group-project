@@ -11,6 +11,7 @@ var Level = function(lev, desc, obj, enemy){
 // Order of commands
 // [talk, pickup, go, run, lookat]
 
+
 var Object = function(name, description, talk, pickup, go, run, change) {
   this.objectName = name;
   this.info = description;
