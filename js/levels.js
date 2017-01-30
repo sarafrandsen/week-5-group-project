@@ -13,7 +13,7 @@ var Level = function(lev, desc, obj, enemy){
 
 var Object = function(name, description, talk, pickup, go, run, change) {
   this.objectName = name;
-  this.info = description;
+  this.check = description;
   this.talk = talk;
   this.pickup = pickup;
   this.go = go;

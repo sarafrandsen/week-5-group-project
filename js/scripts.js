@@ -14,14 +14,17 @@ Object.prototype.levelChange = function(condition) {
 }
 
 
-var command = function(playerInput, typedInput, newUser){
-  if (!typedInput.playerInput) {
-    return "You've entered an incorrect command, type 'help' for a list of commands";
-  } else if (typedInput.playerInput === true) {
-    newUser.level++
-    displayLevel(newUser)
-  } else {
-      return typedInput.playerInput;
+var command = function(actionSelect, typedObject, newUser){
+  try {
+    var inputCheck = eval(typedObject + '.' + actionSelect);
+    if (inputCheck === "level-up") {
+      newUser.level++
+      displayLevel(newUser)
+    } else {
+      return inputCheck;
+    }
+  } catch(e) {
+    return "Please enter a correct value"
   }
 }
 
@@ -37,29 +40,33 @@ var displayLevel = function(newUser) {
 $(document).ready(function() {
 
   // name and character selection
-  $("#user-input").click(function(event){
+  $("#user-input").submit(function(event){
     event.preventDefault();
 
     var inputName = $("#user-name-input").val();
     var newUser = new User(inputName);
 
     $(".name-output").text(newUser.userName);
+      newUser.level++
 
+      $("#in-game-text").append(displayLevel(newUser));
+
+    // actual gameplay with user input and game dialogue
+    $("#user-input-text").submit(function(event) {
+      event.preventDefault();
+
+      var userObjectInput = $("#user-object-input").val();
+      var userActionSelect = $("#user-action-select option:selected").val();
+
+      $("#in-game-text").append("<li> You " + userActionSelect + " " + userObjectInput + "</li>");
+      $("#in-game-text").append(command(userActionSelect, userObjectInput, newUser));
+      $("#user-object-input").val("");
+      $(".name-output").text(newUser.userName);
+
+
+
+    });
   });
 
-  // actual gameplay with user input and game dialogue
-  $("#user-input-text").submit(function(event) {
-    event.preventDefault();
 
-    var userObjectInput = $("#user-object-input").val();
-    var userActionSelect = $("#user-action-select option:selected").val();
-
-    $("#in-game-text").append("<li> You " + userActionSelect + " " + userObjectInput + "</li>");
-    $("#user-object-input").val("");
-    $(".name-output").text(newUser.userName);
-
-    newUser.level++
-
-
-  })
 });
