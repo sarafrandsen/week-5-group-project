@@ -18,8 +18,8 @@ var command = function(actionSelect, typedObject, newUser){
   try {
     var inputCheck = eval(typedObject + '.' + actionSelect);
     if (inputCheck === "level-up") {
-      newUser.level++
-      displayLevel(newUser)
+      newUser.level += 1;
+      return displayLevel(newUser);
     } else {
       return inputCheck;
     }
