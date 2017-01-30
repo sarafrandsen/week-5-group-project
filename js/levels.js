@@ -1,3 +1,5 @@
+//http://www.farlandworld.com/files/TowersofNight5e.pdf
+
 var levelArray = [];
 
 var Level = function(lev, desc, obj, enemy){
