@@ -91,12 +91,14 @@ var userInputConversion = function(userObjectInput) {
     return "carrots";
   } else if (userObjectInput === "turnip") {
     return "turnip";
-  } else if (userObjectInput === "the foxes") {
+  } else if (userObjectInput === "foxes") {
     return "foxes";
   } else if (userObjectInput === "fox") {
     return "fox";
   } else if (userObjectInput === "forest") {
     return "forest";
+  } else if (userObjectInput === "quietly") {
+    return "quietly";
   } else if (userObjectInput === "tree") {
     return "tree";
   } else if (userObjectInput === "large rock") {
@@ -107,12 +109,14 @@ var userInputConversion = function(userObjectInput) {
     return "levelNineLaserGun";
   } else if (userObjectInput === "sharp rocks") {
     return "levelTenRock";
-  } else if (userObjectInput === "teeth") {
-    return "teeth";
+  } else if (userObjectInput === "rope") {
+    return "rope";
   } else if (userObjectInput === "microphone") {
     return "microphone";
   } else if (userObjectInput === "boiling water") {
     return "boilingWater";
+  } else if (userObjectInput === "Leader") {
+    return "leader";
   } else if (userObjectInput === "zipper") {
     return "zipper";
   } else if (userObjectInput === "flee") {
