@@ -14,11 +14,13 @@ Object.prototype.levelChange = function(condition) {
 }
 
 var randomNumberGenerator = function(min, max) {
-  return Math.random() * (max - min) + min;
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
 }
 
-var combat = function(newUser, enemy){
-  var enemyDamage = randomNumberGenerator(0, 1);
+var combat = function(newUser, enemy) {
+  var enemyDamage = randomNumberGenerator(1, 5);
   var newUserDamage = randomNumberGenerator(5, 10);
   console.log(enemy);
 
@@ -158,8 +160,7 @@ var frontEndFight = function(newUser, enemy) {
 $(document).ready(function() {
 
   // name and character selection
-  $("#user-input").submit(function(event){
-    event.preventDefault();
+  $("#user-input").click(function(){
 
     var inputName = $("#user-name-input").val();
     var newUser = new User(inputName);
@@ -183,7 +184,7 @@ $(document).ready(function() {
       $("#user-object-input").val("");
       $(".name-output").text(newUser.userName);
 
-
+      $(".user-hp").text(newUser.hp);
 
     });
   });

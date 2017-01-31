@@ -1,3 +1,13 @@
 .game, .main-character-panel {
   display: none;
 }
+
+.user-info {
+  height: 30vh
+}
+
+.start-btn {
+  margin-top: 15%;
+  height: 35%;
+  width: 15%;
+}
