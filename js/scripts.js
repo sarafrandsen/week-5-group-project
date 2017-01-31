@@ -38,8 +38,24 @@ var displayLevel = function(newUser) {
 var userInputConversion = function(userObjectInput) {
   if (userObjectInput === "weary-man"){
     return "levelOneWearyMan";
+  } else if (userObjectInput === "middle-aged man") {
+    return "levelOneMiddleAgedMan";
+  } else if (userObjectInput === "paper") {
+    return "levelTwoPaper";
+  } else if (userObjectInput === "blacksmith") {
+    return "levelThreeBlacksmith";
+  } else if (userObjectInput === "tent") {
+    return "levelThreeTent";
+  } else if (userObjectInput === "pigs") {
+    return "levelThreePigs";
+  } else if (userObjectInput === "hunt") {
+    return "levelFourHunt";
+  } else if (userObjectInput === "orcs") {
+    return "levelFiveOrcs";
+  } else {
+    return "I don't understand what you mean."
   }
-}
+};
 
 //front-end
 $(document).ready(function() {
@@ -65,7 +81,6 @@ $(document).ready(function() {
       var userObjectInput = $("#user-object-input").val();
       var userActionSelect = $("#user-action-select option:selected").val();
       var convertInput = userInputConversion(userObjectInput);
-      console.log(convertInput);
 
       $("#in-game-text").append("<li> You " + userActionSelect + " " + userObjectInput + "</li>");
       $("#in-game-text").append(command(userActionSelect, convertInput, newUser));
