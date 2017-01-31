@@ -13,41 +13,18 @@
     <div class="jumbotron">
       <h1>Untitled RPG</h1>
     </div>
-    <!---                           this will be hidden once the game starts -->
-      <div class="user-info">
-        <form id="user-input">
-          <!-- name -->
-          <label for="user-name">What's your name, traveller?</label>
-          <input type="text" id="user-name-input">
-          <!-- character -->
-          <!-- char1 -->
-          <div class="form-check form-check-inline">
-            <label class="character-label">
-              <input class="form-check-input" type="radio" name="character-select" id="character-one" value="option1"> Fighter
-            </label>
-          </div>
-        <!-- char2 -->
-          <div class="form-check form-check-inline">
-            <label class="character-label">
-              <input class="form-check-input" type="radio" name="character-select" id="character-two" value="option2"> Wizard
-            </label>
-          </div>
-          <!-- char3 -->
-          <div class="form-check form-check-inline">
-            <label class="character-label">
-              <input class="form-check-input" type="radio" name="character-select" id="character-three" value="option3"> Rogue
-            </label>
-          </div>
-
-            <!-- button -->
-            <button type="submit" name="button">Submit</button>
-        </form>
-      </div>
-
-      <!--                                  this is visible once game starts -->
 <!-- game -->
       <div class="container">
         <div class="game col-md-6">
+          <div class="user-info">
+            <form id="user-input">
+              <!-- name -->
+              <label for="user-name">What's your name, traveller?</label><br>
+              <input type="text" id="user-name-input">
+              <!-- button -->
+              <button type="submit" name="button">Submit</button>
+            </form>
+          </div>
           <div class="game-chat-box">
             <ul id="in-game-text">
             </ul>
