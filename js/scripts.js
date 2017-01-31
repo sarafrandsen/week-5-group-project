@@ -185,6 +185,8 @@ $(document).ready(function() {
       $(".name-output").text(newUser.userName);
 
       $(".user-hp").text(newUser.hp);
+      $('.game-chat-box').scrollTop($('.game-chat-box').height())
+
 
     });
   });

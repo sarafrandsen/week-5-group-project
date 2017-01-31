@@ -2,6 +2,7 @@
   display: none;
 }
 
+
 .user-info {
   height: 30vh
 }
@@ -10,4 +11,9 @@
   margin-top: 15%;
   height: 35%;
   width: 15%;
+}
+
+.game-chat-box {
+  height: 800px;
+  overflow-y: scroll;
 }
