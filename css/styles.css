@@ -1,3 +1,8 @@
 .game, .main-character-panel {
   display: none;
 }
+.game-chat-box {
+  height: 800px;
+  overflow-y: scroll;
+  
+}

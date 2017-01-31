@@ -183,6 +183,7 @@ $(document).ready(function() {
       $("#user-object-input").val("");
       $(".name-output").text(newUser.userName);
 
+      $('.game-chat-box').scrollTop($('.game-chat-box').height())
 
 
     });
