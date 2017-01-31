@@ -46,12 +46,12 @@ var north = new Object("north", "The pine trees look a little softer than the ro
 var south = new Object("south", "The rocks look really jagged and hard. Maybe the trees are a better decision", "You yell at the rocks for not being a clearing.", "You cannot pickup the rocks.", "level-up", "You shoot lasers at the rocks, and miss.", "You take a selfie with the rocks, wasting valuable time.");
 
 //level three
-var level3Button = new Object("button", "This button will open the cockpit in any emergency", "You tell the button to open the cockpit, but you remember that you forgot to install voice control. Still on the to-do list...", "You try to pickup the button, but it's difficult and it doesn't work.", "You're already next to the button", "You try to smash the button, but you miss.", "double-level-up");
+var levelThreeButton = new Object("button", "This button will open the cockpit in any emergency", "You tell the button to open the cockpit, but you remember that you forgot to install voice control. Still on the to-do list...", "You try to pickup the button, but it's difficult and it doesn't work.", "You're already next to the button", "You try to smash the button, but you miss.", "double-level-up");
 
 var bunk = new Object("bunk", "Your bed is a little lumpy, but the blankets are old and familiar, smelling a little like home.", "You tell your stuffed carrot that you love them.", "You try to pick up the bunk but it is bolted to the deck.", "You go to your bed to lie down but its not as comfortable as it looks.", "You throw all the blankets off the bed and onto the floor.", "You try to take a nap but a sense of adventure makes you restless.")
 
 // level four
-var level4Button = new Object("button", "This button will open the cockpit in any emergency", "You tell the button to open the cockpit, but you remember that you forgot to install voice control. Still on the to-do list...", "You try to pickup the button, but it's difficult and it doesn't work.", "You're already next to the button", "You try to smash the button, but you miss.", "level-up");
+var levelFourButton = new Object("button", "This button will open the cockpit in any emergency", "You tell the button to open the cockpit, but you remember that you forgot to install voice control. Still on the to-do list...", "You try to pickup the button, but it's difficult and it doesn't work.", "You're already next to the button", "You try to smash the button, but you miss.", "level-up");
 
 var carrots = new Object("carrots", "Your carrots look a little beat up from the crash but still edible.", "You tell your carrots how sorry you are that they got beat up.", "You pick up your carrots and eat them.", "You walk towards your carrots and accidentally step on them.", "You throw your carrots at the wall and break them more.", "You eat your carrots but are still hungry.")
 
@@ -75,15 +75,15 @@ var foxes = new Object("fight the foxes", "They seem to be talking about somethi
 // level eight
 var tree = new Object ("tree", "The tree is very slippery and tall. It looks like the lowest branches are out of your reach.", "The tree has nothing to say.", "You are strong, but not THAT strong!", "You go to the tree, but it is too slippery to climb.", "You have other enemies to think about right now!", "You try to climb the tree, but it is too slippery to climb.")
 
-var level8Rock = new Object ("large rock", "The rock is a bit shorter than you and very wide, perfect for crouching behind in a laser gun fight.", "The rock suggests you stop talking to rocks.", "The rock kindly asks you to put it down before you hurt yourself. It is very heavy.", "double-level-up", "You have other enemies to think about right now.", "You ask the rock if it is on Linked-In and if it will add you as a network.")
+var levelEightRock = new Object ("large rock", "The rock is a bit shorter than you and very wide, perfect for crouching behind in a laser gun fight.", "The rock suggests you stop talking to rocks.", "The rock kindly asks you to put it down before you hurt yourself. It is very heavy.", "double-level-up", "You have other enemies to think about right now.", "You ask the rock if it is on Linked-In and if it will add you as a network.")
 
 // level nine
 var stick = new Object ("stick", "The stick is inches from your paw, and looks a little brittle.", "The stick doesn't have much to say to you.", "You pick up the stick, but it breaks easily in your paw.", "You are already very close to the stick.", "You cannot do that right now.", "You pick up the stick, but it breaks easily in your hands.")
 
-var level9LaserGun = new Object ("laser gun", "Your trusty laser gun, The Unforgettable, is quite a way behind you, but you might be able to reach it in time.", "You call out to your last gun, but it doesn't respond.", "level-up", "You cannot do that right now.", "level-up")
+var levelNineLaserGun = new Object ("laser gun", "Your trusty laser gun, The Unforgettable, is quite a way behind you, but you might be able to reach it in time.", "You call out to your last gun, but it doesn't respond.", "level-up", "You cannot do that right now.", "level-up")
 
 // level ten
-var level10Rock = new Object ("sharp rocks", "The rocks are in a small pile nearby, and they look very sharp.", "You ask the rocks to cut your ropes, but they do not respond.", "You can't pick up the rocks when you are tied up!", "You try to wiggle your way towards the rocks, but find it too difficult.", "You cannot do this right now.", "You try to wiggle your way towards the rocks, but find it too difficult.")
+var levelTenRock = new Object ("sharp rocks", "The rocks are in a small pile nearby, and they look very sharp.", "You ask the rocks to cut your ropes, but they do not respond.", "You can't pick up the rocks when you are tied up!", "You try to wiggle your way towards the rocks, but find it too difficult.", "You cannot do this right now.", "You try to wiggle your way towards the rocks, but find it too difficult.")
 
 var teeth = new Object("teeth", "You cant see your teeth, but from past mirror momments you know they are long, sharp, and very attractive.", "Your teeth do not talk.", "You cannont pick up your teeth because they are attached to you.", "You and your teeth cannot go anywhere.", "You bang your head against the ground and knock out all your teeth.", "level-up")
 
@@ -103,10 +103,12 @@ var foxJail = new Object("fox jail", "Fox jail is a prison established 300 years
 
 var dinner = new Object("dinner", "The foxes don't look very hungry.", "You suggest they make turnip soup with Le Leader, but the foxes didn't find turnips appetizing to begin with.", "What are you trying to do?", "It's rude to invite yourself to someone else's meal.", "The foxes are now your friends", "The foxes don't look very hungry.")
 
+
+
 //All Levels
 var level1 = new Level(1, "You are Riley, Space Rabbit Extraodinaire, exploring new and old worlds in the farthest reaches of space. Your ship, a KaratX70T, is an old version, but trusty, and quite frankly, smells pretty dang good. Out of your window, you see a terrestrial planet, one you have never visited. You're munching on a carrot and listening to the newest hit space pop song, when your console begins to blink. A distress beacon! You press the play button and listen. 'Anyone, please help! We are in trouble. We are being attacked! Our little ones! They are taking them!' The message quickly turns to static. Your computer tells you the message is coming from the [planet] below. Will you respond to the message, or [ignore] the cries and continue listening to that catchy new jam?");
 
-var level2 = new Level(2, "You change course toward the planet. Upon entering the atmosphere, you begin to feel turbulence. This isn't normal. An error message begins to display on your computer's output screen. The engines are losing power drastically! There must be something with the atmosphere here. Something terrible. Your engines begin to completely fail and the ship starts to drop. You press the 'Glide' button above your head and the KaratX70T sprouts long gliding wings. The forest below is dense and there are no clearings to crash land in. To the [north] there are dense pines, and to the [south] you see what looks to be sharp, jagged rocks.");
+var level2 = new Level(2, "You change course toward the planet. Upon entering the atmosphere, you begin to feel turbulence. This isn't normal. An error message begins to display on your computer's output screen. The engines are losing power drastically! There must be something with the atmosphere here. Something terrible. Your engines begin to completel`y fail and the ship starts to drop. You press the 'Glide' button above your head and the KaratX70T sprouts long gliding wings. The forest below is dense and there are no clearings to crash land in. To the [north] there are dense pines, and to the [south] you see what looks to be sharp, jagged rocks.");
 
 var level3 = new Level(3,"You crash into the rocks and the landing is extremely painful. You wake with a headache and your ears and aching. All you remember is a loud bang and everything going black. There are sparks coming from your computer and it smells a lot like burning fur. There is an emergency [button] to open the cockpit. It's hard to see out your window, but you make out a few moving shadows amongst the typical shadows of forest trees. Those shadows don't look good, but your [bunk] is still intact and a restorative nap sounds good right about now.")
 

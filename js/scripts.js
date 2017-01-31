@@ -71,25 +71,57 @@ var displayLevel = function(newUser) {
 
 // input name to variable name
 var userInputConversion = function(userObjectInput) {
-  // if (userObjectInput === "planet"){
-  //   return "planet";
-  // } else if (userObjectInput === "middle-aged man") {
-  //   return "levelOneMiddleAgedMan";
-  // } else if (userObjectInput === "paper") {
-  //   return "levelTwoPaper";
-  // } else if (userObjectInput === "blacksmith") {
-  //   return "levelThreeBlacksmith";
-  // } else if (userObjectInput === "tent") {
-  //   return "levelThreeTent";
-  // } else if (userObjectInput === "pigs") {
-  //   return "levelThreePigs";
-  // } else if (userObjectInput === "hunt") {
-  //   return "levelFourHunt";
-  // } else if (userObjectInput === "orcs") {
-  //   return "levelFiveOrcs";
-  // } else {
-  //   return "I don't understand what you mean."
-  // }
+  if (userObjectInput === "planet"){
+    return "planet";
+  } else if (userObjectInput === "ignore") {
+    return "ignore";
+  } else if (userObjectInput === "north") {
+    return "north";
+  } else if (userObjectInput === "south") {
+    return "south";
+  } else if (userObjectInput === "button") {
+    return "levelThreeButton";
+  } else if (userObjectInput === "bunk") {
+    return "bunk";
+  } else if (userObjectInput === "button") {
+    return "levelFourButton";
+  } else if (userObjectInput === "carrots") {
+    return "carrots";
+  } else if (userObjectInput === "turnip") {
+    return "turnip";
+  } else if (userObjectInput === "the foxes") {
+    return "foxes";
+  } else if (userObjectInput === "fox") {
+    return "fox";
+  } else if (userObjectInput === "forest") {
+    return "forest";
+  } else if (userObjectInput === "tree") {
+    return "tree";
+  } else if (userObjectInput === "large rock") {
+    return "levelEightRock";
+  } else if (userObjectInput === "stick") {
+    return "stick";
+  } else if (userObjectInput === "laser gun") {
+    return "levelNineLaserGun";
+  } else if (userObjectInput === "sharp rocks") {
+    return "levelTenRock";
+  } else if (userObjectInput === "teeth") {
+    return "teeth";
+  } else if (userObjectInput === "microphone") {
+    return "microphone";
+  } else if (userObjectInput === "boiling water") {
+    return "boilingWater";
+  } else if (userObjectInput === "zipper") {
+    return "zipper";
+  } else if (userObjectInput === "flee") {
+    return "flee";
+  } else if (userObjectInput === "fox jail") {
+    return "foxJail";
+  } else if (userObjectInput === "dinner") {
+    return "dinner";
+  } else {
+    return "I don't understand what you mean."
+  }
   return userObjectInput
 };
 
