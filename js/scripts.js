@@ -20,6 +20,9 @@ var command = function(actionSelect, typedObject, newUser){
     if (inputCheck === "level-up") {
       newUser.level += 1;
       return displayLevel(newUser);
+    } else if (inputCheck === "double-level-up"){
+      newUser.level += 2;
+      return displayLevel(newUser);
     } else {
       return inputCheck;
     }
