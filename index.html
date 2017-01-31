@@ -15,16 +15,16 @@
     </div>
 <!-- game -->
       <div class="container">
+        <div class="user-info">
+          <form id="user-input">
+            <!-- name -->
+            <label for="user-name">What's your name, traveller?</label><br>
+            <input type="text" id="user-name-input">
+            <!-- button -->
+            <button type="submit" name="button">Submit</button>
+          </form>
+        </div>
         <div class="game col-md-6">
-          <div class="user-info">
-            <form id="user-input">
-              <!-- name -->
-              <label for="user-name">What's your name, traveller?</label><br>
-              <input type="text" id="user-name-input">
-              <!-- button -->
-              <button type="submit" name="button">Submit</button>
-            </form>
-          </div>
           <div class="game-chat-box">
             <ul id="in-game-text">
             </ul>
@@ -59,27 +59,18 @@
             <h1 class="name-output"></h1>
             <!-- stats -->
             <div class="character-stats col-md-6">
-              <ul>
-                <li>Lorem ipsum dolor sit amet, posuere hymenaeos</li>
-                <li>Lorem ipsum dolor sit amet, posuere hymenaeos</li>
-                <li>Lorem ipsum dolor sit amet, posuere hymenaeos</li>
-                <li>Lorem ipsum dolor sit amet, posuere hymenaeos</li>
-              </ul>
+              <h3>HP: <span class="user-hp"></span></h3>
             </div>
             <!-- character image -->
             <div class="character-image col-md-6">
               <img src="http://cdn1-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-2.jpg" width="300px" class="character-one">
-              <!-- <img src="http://cdn1-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-2.jpg" width="300px" class="character-two">
 
-              <img src="http://cdn1-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-2.jpg" width="300px" class="character-three"> -->
             </div>
           </div>
           <!-- character bio -->
           <div class="row row-two">
             <div class="character-bio col-md-12">
-              <p class="character-one">Lorem ipsum dolor sit amet, posuere hymenaeos eros cursus urna, malesuada sollicitudin sem, dui molestie. Torquent aliquam mauris at felis, nibh iaculis dolore commodo elit eget, arcu praesent lacus vehicula ut lacus magna, leo commodo mauris ligula. Nec tristique orci, in cum harum metus, aenean in purus vitae tellus eget. Condimentum etiam nulla vestibulum ac semper aliquam, dolor mus vel felis integer, in quis, donec lorem ipsum nibh donec necessitatibus a. Suspendisse ante non elit morbi eget scelerisque.</p>
-              <!-- <p class="character-two">Lorem ipsum dolor sit amet, posuere hymenaeos eros cursus urna, malesuada sollicitudin sem, dui molestie. Torquent aliquam mauris at felis, nibh iaculis dolore commodo elit eget, arcu praesent lacus vehicula ut lacus magna, leo commodo mauris ligula. Nec tristique orci, in cum harum metus, aenean in purus vitae tellus eget. Condimentum etiam nulla vestibulum ac semper aliquam, dolor mus vel felis integer, in quis, donec lorem ipsum nibh donec necessitatibus a. Suspendisse ante non elit morbi eget scelerisque.</p>
-              <p class="character-three">Lorem ipsum dolor sit amet, posuere hymenaeos eros cursus urna, malesuada sollicitudin sem, dui molestie. Torquent aliquam mauris at felis, nibh iaculis dolore commodo elit eget, arcu praesent lacus vehicula ut lacus magna, leo commodo mauris ligula. Nec tristique orci, in cum harum metus, aenean in purus vitae tellus eget. Condimentum etiam nulla vestibulum ac semper aliquam, dolor mus vel felis integer, in quis, donec lorem ipsum nibh donec necessitatibus a. Suspendisse ante non elit morbi eget scelerisque.</p> -->
+              <p class="character-one">Bio goes here</p>
             </div>
           </div>
           <!-- inventory -->

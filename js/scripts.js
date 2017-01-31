@@ -165,9 +165,9 @@ $(document).ready(function() {
     var newUser = new User(inputName);
 
     $(".name-output").text(newUser.userName);
-      console.log("This is the current level: " + newUser.level);
-
-      $("#in-game-text").append(displayLevel(newUser));
+    $("#in-game-text").append(displayLevel(newUser));
+    $(".user-info").slideUp();
+    $(".game, .main-character-panel").slideDown();
 
     // actual gameplay with user input and game dialogue
     $("#user-input-text").submit(function(event) {
