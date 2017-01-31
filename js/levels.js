@@ -16,21 +16,21 @@ var Enemy = function(name, hp){
 }
 
 //Enemy Objects
-var enemy1 = new Enemy("fox", 30);
-var enemy2 = new Enemy("campfire foxes", 40);
+var enemy1 = new Enemy("Fox", 30);
+var enemy2 = new Enemy("Campfire Foxes", 40);
 var enemy3 = new Enemy("Le Leader", 60);
 
 // Order of commands
 // [talk, pickup, go, run, lookat, check]
 
-var Object = function(name, description, talk, pickup, go, run, fight, interact) {
+var Object = function(name, description, talk, pickup, go, fight, inter) {
   this.objectName = name;
   this.check = description;
   this.talk = talk;
   this.pickup = pickup;
   this.go = go;
   this.fight = fight;
-  this.interact = interact;
+  this.interact = inter;
   this.help = "Please target one of the items in [brackets]."
 };
 
@@ -46,12 +46,12 @@ var north = new Object("north", "The pine trees look a little softer than the ro
 var south = new Object("south", "The rocks look really jagged and hard. Maybe the trees are a better decision", "You yell at the rocks for not being a clearing.", "You cannot pickup the rocks.", "level-up", "You shoot lasers at the rocks, and miss.", "You take a selfie with the rocks, wasting valuable time.");
 
 //level three
-var level3Button = new Object("button", "This button will open the cockpit in any emergency", "You tell the button to open the cockpit, but you remember that you forgot to install voice control. Still on the to-do list...", "You try to pickup the button, but it's difficult and it doesn't work.", "You're already next to the button", "You try to smash the button, but you miss.", "double-level-up");
+var emergencyButton = new Object("button", "This button will open the cockpit in any emergency", "You tell the button to open the cockpit, but you remember that you forgot to install voice control. Still on the to-do list...", "You try to pickup the button, but it's difficult and it doesn't work.", "You're already next to the button", "You try to smash the button, but you miss.", "double-level-up");
 
 var bunk = new Object("bunk", "Your bed is a little lumpy, but the blankets are old and familiar, smelling a little like home.", "You tell your stuffed carrot that you love them.", "You try to pick up the bunk but it is bolted to the deck.", "You go to your bed to lie down but its not as comfortable as it looks.", "You throw all the blankets off the bed and onto the floor.", "You try to take a nap but a sense of adventure makes you restless.")
 
 // level four
-var level4Button = new Object("button", "This button will open the cockpit in any emergency", "You tell the button to open the cockpit, but you remember that you forgot to install voice control. Still on the to-do list...", "You try to pickup the button, but it's difficult and it doesn't work.", "You're already next to the button", "You try to smash the button, but you miss.", "level-up");
+var button = new Object("button", "This button will open the cockpit in any emergency", "You tell the button to open the cockpit, but you remember that you forgot to install voice control. Still on the to-do list...", "You try to pickup the button, but it's difficult and it doesn't work.", "You're already next to the button", "You try to smash the button, but you miss", "level-up");
 
 var carrots = new Object("carrots", "Your carrots look a little beat up from the crash but still edible.", "You tell your carrots how sorry you are that they got beat up.", "You pick up your carrots and eat them.", "You walk towards your carrots and accidentally step on them.", "You throw your carrots at the wall and break them more.", "You eat your carrots but are still hungry.")
 
@@ -59,9 +59,7 @@ var carrots = new Object("carrots", "Your carrots look a little beat up from the
 var turnip = new Object ("turnip", "The turnip is about a foot tall and a foot wide. The stalks on its head are styled into a very fashionable 'hair-do'. Its torso is a lovely shade of purple.", "The turnip asks again for your help." , "The turnip is indignant that you picked it up. This is wildly offensive in turnip culture.", "Don't move! There is a fox with a laser pointed at you.", "The turnip bites your foot and insists the fox is the bad guy.", "The turnip asks for your help again!")
 
 
-var foxes = new Object("fight the foxes", "They seem to be talking about something your can't quite hear from here.", "You can't talk to them from here, it would blow your cover!", "You cannot pickup these foxes.", "double-level-up", "double-level-up", "You take a selfie with the foxes, wasting valuable time.");
-
-var fox = new Object("fox", "The fox is wearing the FiSSwL (Foxes in Spacesuits with Lasers) patch. The space suit's face shield is opaque and you cannot see inside. The foxe's ears are poking out of the top of the space suit.", "You tell the fox that maybe it should 'freeze' instead. It scroffs at the request.", "You don't want to try to pick him up, since he has a laser pointed at you.", "You don't want to move when he has a laser pistol pointed at you.", "level-up", "You take a selfie with the enemy fox. The turnips are horrified.");
+var fox = new Object("fox", "The fox is wearing the FiSSwL (Foxes in Spacesuits with Lasers) patch. The space suit's face shield is opaque and you cannot see inside. The foxe's ears are poking out of the top of the space suit.", "You tell the fox that maybe it should 'freeze' instead. It scroffs at the request.", "You don't want to try to pick him up, since he has a laser pointed at you.", "You don't want to move when he has a laser pistol pointed at you.", "fight1", "You take a selfie with the enemy fox. The turnips are horrified.");
 
 
 // level six
@@ -70,7 +68,7 @@ var forest = new Object("forest", "The forest is dense with trees", "You whistle
 // level seven
 var quietly = new Object("sneak quietly", "You could sneak quietly if you decide to 'go' quietly", "You whisper to yourself about how sad it is that the foxes are eating turnips.", "You cannot pickup abstract things", "level-up", "You punch the air as a warm up.", "You take a selfie, quietly, with the camp behind you, wasting valuable time.");
 
-var foxes = new Object("fight the foxes", "They seem to be talking about something your can't quite hear from here.", "You can't talk to them from here, it would blow your cover!", "You cannot pickup these foxes.", "double-level-up", "You take a selfie with the foxes, wasting valuable time.")
+var foxes = new Object("fight the foxes", "They seem to be talking about something your can't quite hear from here.", "You can't talk to them from here, it would blow your cover!", "You cannot pickup these foxes.", "double-level-up", "double-level-up", "You take a selfie with the foxes, wasting valuable time.")
 
 // level eight
 var tree = new Object ("tree", "The tree is very slippery and tall. It looks like the lowest branches are out of your reach.", "The tree has nothing to say.", "You are strong, but not THAT strong!", "You go to the tree, but it is too slippery to climb.", "You have other enemies to think about right now!", "You try to climb the tree, but it is too slippery to climb.")
@@ -88,7 +86,7 @@ var level10Rock = new Object ("sharp rocks", "The rocks are in a small pile near
 var teeth = new Object("teeth", "You cant see your teeth, but from past mirror momments you know they are long, sharp, and very attractive.", "Your teeth do not talk.", "You cannont pick up your teeth because they are attached to you.", "You and your teeth cannot go anywhere.", "You bang your head against the ground and knock out all your teeth.", "level-up")
 
 // level eleven
-var microphone = new Object("microphone", "The microphone is attached to a long cord. It is very similar to a lasso or a ball and chain.", "Your voice is magnified to the crowd and startles you.", "level-up", "You go towards the microphone and knock it off the stand", "You hit the microphone and knock it off the stand", "level-up")
+var microphone = new Object("microphone", "The microphone is attached to a long cord. It is very similar to a lasso or a ball and chain.", "Your voice is magnified to the crowd and startles you.", "fight3", "You go towards the microphone and knock it off the stand", "You hit the microphone and knock it off the stand", "fight3")
 
 var boilingWater = new Object("boiling water", "The pot of boiling water is large and black, there is steam rising from the top. It looks like it could badly burn your enemies.", "You tell the babies hanging about that you are there to rescue them.", "You try to pick up the pot but its too large and the hot water starts to overflow almost burning you", "You walk towards the boiling water but the steam makes it hard to see.", "You attack the pot of boiling water and it almost spills all over you!", "You go towards the pot of boiling water and it almost spills all over you!")
 
@@ -98,7 +96,7 @@ var level1 = new Level(1, "You are Riley, Space Rabbit Extraodinaire, exploring 
 
 var level2 = new Level(2, "You change course toward the planet. Upon entering the atmosphere, you begin to feel turbulence. This isn't normal. An error message begins to display on your computer's output screen. The engines are losing power drastically! There must be something with the atmosphere here. Something terrible. Your engines begin to completely fail and the ship starts to drop. You press the 'Glide' button above your head and the KaratX70T sprouts long gliding wings. The forest below is dense and there are no clearings to crash land in. To the [north] there are dense pines, and to the [south] you see what looks to be sharp, jagged rocks.");
 
-var level3 = new Level(3,"You crash into the rocks and the landing is extremely painful. You wake with a headache and your ears and aching. All you remember is a loud bang and everything going black. There are sparks coming from your computer and it smells a lot like burning fur. There is an emergency [button] to open the cockpit. It's hard to see out your window, but you make out a few moving shadows amongst the typical shadows of forest trees. Those shadows don't look good, but your [bunk] is still intact and a restorative nap sounds good right about now.")
+var level3 = new Level(3,"You crash into the rocks and the landing is extremely painful. You wake with a headache and your ears and aching. All you remember is a loud bang and everything going black. There are sparks coming from your computer and it smells a lot like burning fur. There is an [emergency button] to open the cockpit. It's hard to see out your window, but you make out a few moving shadows amongst the typical shadows of forest trees. Those shadows don't look good, but your [bunk] is still intact and a restorative nap sounds good right about now.")
 
 //Choice of North
 var level4 = new Level(4, "You crash into the forest below. You wake with a headache and your ears are aching. All you remember is the smashing of branches and a loud cracking sound. There are sparks coming from your computer, and it smells a little like burning fur. There is an emergency [button] to open the cockpit. It's hard to see out your window, but you make out a few moving shadows. You also make out some [carrots] on the deck floor that still look edible, and a snack sounds good right about now.")
@@ -109,9 +107,9 @@ var level6 = new Level(6, "You swing your paws at the fox and knock its laser gu
 
 var level7 = new Level(7, "You dash into the forest, hopping as fast as you can, following the sound of the crying baby turnip. As you catch up, you hear what sounds like a large camp ahead of you. You slow down and approach quietly. Hiding behind some bushes, you spy on the camp. There are FiSSwL everywhere, and you watch the baby turnip being carried into the camp. There sit a group of Foxes in Space Suits with Lasers around a fire, chatting. You can either infiltrate the camp [quietly], or run in to fight the [foxes] openly.");
 
-var level8 = new Level(8, "You sneak closer to the foxes' campfire to hear what they are saying. The FiSSwL are discussing their plans to gather with their Leader, Le Leader du Les Foxes, for the feast of baby turnip soup. The meeting is this afternoon, and very close-by. As you creep closer to the group, you wince as a sharp CRACK is heard from beneath your fuzzy toes. Uh-oh! You've stepped on a twig, and the Foxes in Space Suits with Lasers quickly turn their heads towards the sound. You need to think quickly! You notice nearby a tall [tree] you might be able to climb, (though it looks very slippery), and a [large rock] you could use to sheild yourself as you shoot the foxes."
+var level8 = new Level(8, "You sneak closer to the foxes' campfire to hear what they are saying. The FiSSwL are discussing their plans to gather with their Leader, Le Leader du Les Foxes, for the feast of baby turnip soup. The meeting is this afternoon, and very close-by. As you creep closer to the group, you wince as a sharp CRACK is heard from beneath your fuzzy toes. Uh-oh! You've stepped on a twig, and the Foxes in Space Suits with Lasers quickly turn their heads towards the sound. You need to think quickly! You notice nearby a tall [tree] you might be able to climb, (though it looks very slippery), and a [large rock] you could use to sheild yourself as you shoot the foxes.");
 
-var level9 = new Level(9, "You're close enough to hear the foxes' nefarious plans to meet that afternoon to begin the feast. Your sense of has justice inflamed! You rush towards the Foxes in Space Suits with Laser's campfire. The meeting is soon, and very close-by, and you can't waste time sneaking around. You're the Space Rabbit Extraordinaire, and the bad guys need to be taught a lesson! You charge towards the campfire with a blood curdling squeak. You see a [stick] within reach you could easily use as a weapon. Oh, right! Nearly too late, but maybe in time, you realize you've left your [laser gun], the Unforgettable, a few yards behind you."
+var level9 = new Level(9, "You're close enough to hear the foxes' nefarious plans to meet that afternoon to begin the feast. Your sense of has justice inflamed! You rush towards the Foxes in Space Suits with Laser's campfire. The meeting is soon, and very close-by, and you can't waste time sneaking around. You're the Space Rabbit Extraordinaire, and the bad guys need to be taught a lesson! You charge towards the campfire with a blood curdling squeak. You see a [stick] within reach you could easily use as a weapon. Oh, right! Nearly too late, but maybe in time, you realize you've left your [laser gun], the Unforgettable, a few yards behind you.");
 
 var level10 = new Level(10, "You reach for your trusty laser gun, the Unforgettable. Before your little paws can grasp the handle, you are swiftly lifted by the ears and a rope is tied around you. The humility of looking like an old Bugs Bunny cartoon is not lost on you, and you struggle to break free. Confident you aren't going anywhere, the foxes leave with the crying baby turnip in tow. Little did they know, you are Riley, Space Rabbit Extraordinaire, and there's not an explorer in the universe who can match your skills in escape. Nearby, you notice some [sharp rocks] just within reach. In your arsenal of jailbreak tools, you have your Krav Maga training, utlizing your sharp bunny [teeth] and cute wriggling. Hurry! You need to get out in time to crash that meeting!")
 

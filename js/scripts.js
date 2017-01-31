@@ -20,17 +20,19 @@ var randomNumberGenerator = function(min, max) {
 var combat = function(newUser, enemy){
   var enemyDamage = randomNumberGenerator(0, 1);
   var newUserDamage = randomNumberGenerator(5, 10);
+  console.log(enemy);
 
   enemy.hp -= newUserDamage;
   newUser.hp -= enemyDamage;
 
   if (enemy.hp >= 0 && newUser.hp > 0) {
-    return "You have done " + newUserDamage +" to the" + enemy.name + ". He has " + enemy.hp + " health left.";
+    return "You have done " + newUserDamage +" to the" + enemy.enemyName + ". He has " + enemy.hp + " health left.";
   } else if (newUser.hp <= 0) {
     return "You have died. Game over.";
   } else {
     newUser.level += 1;
     return displayLevel(newUser);
+
   }
 
 };
@@ -39,18 +41,18 @@ var combat = function(newUser, enemy){
 var command = function(actionSelect, typedObject, newUser){
   try {
     var inputCheck = eval(typedObject + '.' + actionSelect);
-    if (inputCheck === "level-up") {
-      newUser.level += 1;
-      return displayLevel(newUser);
-    } else if (inputCheck === "double-level-up"){
-      newUser.level += 2;
-      return displayLevel(newUser);
-    } else if (inputCheck === "fight1") {
+    if (inputCheck === "fight1") {
         return combat(newUser, enemy1)
     } else if (inputCheck === "fight2") {
         return combat(newUser, enemy2)
     } else if (inputCheck === "fight3") {
         return combat(newUser, enemy3)
+    } else if (inputCheck === "level-up") {
+      newUser.level += 1;
+      return displayLevel(newUser);
+    } else if (inputCheck === "double-level-up"){
+      newUser.level += 2;
+      return displayLevel(newUser);
     } else {
       return inputCheck;
     }
@@ -71,26 +73,21 @@ var displayLevel = function(newUser) {
 
 // input name to variable name
 var userInputConversion = function(userObjectInput) {
-  // if (userObjectInput === "planet"){
-  //   return "planet";
-  // } else if (userObjectInput === "middle-aged man") {
-  //   return "levelOneMiddleAgedMan";
-  // } else if (userObjectInput === "paper") {
-  //   return "levelTwoPaper";
-  // } else if (userObjectInput === "blacksmith") {
-  //   return "levelThreeBlacksmith";
-  // } else if (userObjectInput === "tent") {
-  //   return "levelThreeTent";
-  // } else if (userObjectInput === "pigs") {
-  //   return "levelThreePigs";
-  // } else if (userObjectInput === "hunt") {
-  //   return "levelFourHunt";
-  // } else if (userObjectInput === "orcs") {
-  //   return "levelFiveOrcs";
-  // } else {
-  //   return "I don't understand what you mean."
-  // }
-  return userObjectInput
+   if (userObjectInput === "emergency button") {
+    return "emergencyButton";
+  } else if (userObjectInput === "paper") {
+    return "levelTwoPaper";
+  } else if (userObjectInput === "large rock") {
+    return "level8Rock";
+  } else if (userObjectInput === "laser gun") {
+    return "level9LaserGun";
+  } else if (userObjectInput === "sharp rocks") {
+    return "level10Rock";
+  } else if (userObjectInput === "boiling water") {
+    return "boilingWater";
+  } else {
+    return userObjectInput
+  }
 };
 
 //front-end
