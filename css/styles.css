@@ -35,16 +35,9 @@ input, label, button {
 }
 
 .start-btn:hover {
-  height: 100%;
-  width: 22%;
   background-color: #707070;
   border-radius: 5px;
 }
-
-/*input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
-  border-width: 0px;
-  border-style: none;
-}*/
 
 
 .user-info {
@@ -57,9 +50,8 @@ input, label, button {
 }
 
 .start-btn {
-  margin-top: 15%;
-  height: 65%;
-  width: 15%;
+  height: 200px;
+  width: 100%;
   background-image: url(http://www.dezignwithaz.com/images/space-rocket-stick-ons.png);
   background-repeat: no-repeat;
   background-position: center;
