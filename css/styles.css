@@ -23,3 +23,11 @@
   height: 800px;
   overflow-y: scroll;
 }
+
+.text-object {
+  color:blue;
+}
+
+.text-enemy {
+  color:red;
+}

@@ -164,6 +164,7 @@ $(document).ready(function() {
       var userActionSelect = $("#user-action-select option:selected").val();
       var convertInput = userInputConversion(userObjectInput);
 
+
       $("#in-game-text").append("<li> You " + userActionSelect + " " + userObjectInput + "</li>");
       var append = command(userActionSelect, convertInput, newUser);
       $("#in-game-text").append(append);
