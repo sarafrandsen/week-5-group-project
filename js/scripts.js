@@ -90,17 +90,17 @@ var displayLevel = function(newUser) {
 var userInputConversion = function(userObjectInput) {
   if (userObjectInput === "planet"){
     return "planet";
-  } else if (userObjectInput === "ignore") {
-    return "ignore";
+  } else if (userObjectInput === "space radio") {
+    return "radio";
   } else if (userObjectInput === "north") {
     return "north";
   } else if (userObjectInput === "south") {
     return "south";
-  } else if (userObjectInput === "switch") {
+  } else if (userObjectInput === "emergency switch") {
     return "levelThreeButton";
   } else if (userObjectInput === "bunk") {
     return "bunk";
-  } else if (userObjectInput === "button") {
+  } else if (userObjectInput === "emergency button") {
     return "levelFourButton";
   } else if (userObjectInput === "carrots") {
     return "carrots";
@@ -134,12 +134,12 @@ var userInputConversion = function(userObjectInput) {
     return "leader";
   } else if (userObjectInput === "zipper") {
     return "zipper";
-  } else if (userObjectInput === "flee") {
-    return "flee";
+  } else if (userObjectInput === "outside") {
+    return "outside";
   } else if (userObjectInput === "fox jail") {
     return "foxJail";
-  } else if (userObjectInput === "dinner") {
-    return "dinner";
+  } else if (userObjectInput === "pot") {
+    return "pot";
   } else if (userObjectInput === "ship") {
     return "ship";
   } else{
