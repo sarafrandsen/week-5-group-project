@@ -47,7 +47,7 @@ var south = new Object("south", "The rocks look really jagged and hard. Maybe th
 
 //level three
 
-var levelThreeButton = new Object("emergency button", "This button will open the cockpit in any emergency", "You tell the button to open the cockpit, but you remember that you forgot to install voice control. Still on the to-do list...", "You try to pickup the button, but it's difficult and it doesn't work.", "You're already next to the button", "You try to smash the button, but you miss.", "double-level-up");
+var levelThreeButton = new Object("switch", "This button will open the cockpit in any emergency", "You tell the button to open the cockpit, but you remember that you forgot to install voice control. Still on the to-do list...", "You try to pickup the button, but it's difficult and it doesn't work.", "You're already next to the button", "You try to smash the button, but you miss.", "double-level-up");
 
 var bunk = new Object("bunk", "Your bed is a little lumpy, but the blankets are old and familiar, smelling a little like home.", "You tell your stuffed carrot that you love them.", "You try to pick up the bunk but it is bolted to the deck.", "You go to your bed to lie down but its not as comfortable as it looks.", "You throw all the blankets off the bed and onto the floor.", "You try to take a nap but a sense of adventure makes you restless.");
 

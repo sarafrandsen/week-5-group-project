@@ -95,7 +95,7 @@ var userInputConversion = function(userObjectInput) {
     return "north";
   } else if (userObjectInput === "south") {
     return "south";
-  } else if (userObjectInput === "emergency button") {
+  } else if (userObjectInput === "switch") {
     return "levelThreeButton";
   } else if (userObjectInput === "bunk") {
     return "bunk";
@@ -148,11 +148,6 @@ var userInputConversion = function(userObjectInput) {
 };
 
 
-userInputConvert = function(input) {
-  if (input === "talk") {
-    return "talk to"
-  }
-}
 
 //front-end
 
@@ -180,13 +175,10 @@ $(document).ready(function() {
       var userObjectInput = $("#user-object-input").val();
       var userActionSelect = $("#user-action-select option:selected").val();
       var convertInput = userInputConversion(userObjectInput);
-      var actionOutput = userInputConvert(userActionSelect);
-
-      $("#in-game-text").append("<li> You " + actionOutput + " " + userObjectInput + "</li>");
 
       var append = command(userActionSelect, convertInput, newUser);
 
-      $("#in-game-text").append(append);
+      $("#in-game-text").append("<br><br>" + append);
       $("#user-object-input").val("");
       $(".name-output").text(newUser.userName);
 
