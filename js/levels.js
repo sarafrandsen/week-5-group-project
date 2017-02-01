@@ -100,6 +100,8 @@ var zipper = new Object("zipper", "The zipper pull is hanging right below Le Lea
 
 var flee = new Object("flee", "Behind Le Leader du les Foxes is a clear path towards the forest, and behind you is a crowd of foxes.", "You won't be able to talk your way out of this situation!", "There is nothing in the area that might help you escape.", "You try to run, but a group of foxes block your path.", "You try fighting your way through, but there are too many foxes!", "You try running, but a group of foxes block your path!");
 
+var ship = new Object("ship", "The brand new ship modifications make it shine just like an KaratX90T!", "You pat your new ship and say, Thatta-boy", "You cannot lift your ship!", "game-end", "You don't want to fight this brand new ship", "game-end")
+
 // level thirteen
 var foxJail = new Object("fox jail", "Fox jail is a prison established 300 years ago by the founders of Fox City. The crime rate in Fox City is quite low, so it is not highly populated. However, the leaders of Fox City ensure the best guards patrol the prison.", "level-up", "You cannot lift a giant prison. What are you trying to do?", "You need to return the baby turnips to their parents!", "The foxes are no longer the bad guys.", "level-up");
 
@@ -138,7 +140,7 @@ var level13 = new Level(13, "Le Leader du Les Foxes, ducks with a twirl and trie
 var level14 = new Level(14, "You, Riley, Space Rabbit Extraordinaire, use your powerful legs to jump behind Le Leader and tug the zipper down. Deflating, the space suit sinks to the legs of a--What is this? A turnip! A gasp resonates through the crowd. Confused, the foxes begin to disperse, muttering among themselves, 'we didn't even like turnips anyway' and 'we were only doing it because that guy said it was cool.' A few foxes, embarassed by the whole ordeal, hand you your trusty laser gun, the Unforgettable, (which you've totally forgotten about), ask you what they should do with the treachorous ex-leader of the FiSSwL. You have a couple ideas in mind. They could lock the turnip up in [fox jail], they could save him for [dinner].");
 
 
-var level15 = new Level(15, "Carrying the rescued turnip babies, you make your way back to the turnip town. By now, the turnips have finished repairing your ship, and what was once a KaratX70T now sparkles like a KaratX90T. The foxes are gone, Le Leader is behind bars, the babies are back with their families, and you've got a sweet new ride. All-in-all, you'd call this adventure a successful one. Bidding your new friends farewell, you take off in your ship, tucking the Unforgettable in its holster onto the co-pilot's seat. Safe travels, Riley, Space Rabbit Extraordinaire!");
+var level15 = new Level(15, "Carrying the rescued turnip babies, you make your way back to the turnip town. By now, the turnips have finished repairing your ship, and what was once a KaratX70T now sparkles like a KaratX90T. The foxes are gone, Le Leader is behind bars, the babies are back with their families, and you've got a sweet new ride. All-in-all, you'd call this adventure a successful one. It's time to say goodbye and take off in your [ship], tucking the Unforgettable in its holster onto the co-pilot's seat.");
 
 
 levelArray.push(level1, level2, level3, level4, level5, level6, level7, level8, level9, level10, level11, level12, level13, level14, level15);

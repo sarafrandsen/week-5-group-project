@@ -1,5 +1,11 @@
-.game, .main-character-panel {
+.game, .main-character-panel, .game-end {
   display: none;
+}
+
+.game-end-div {
+  float: right;
+  position: absolute;
+  left: 25%;
 }
 
 

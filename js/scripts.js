@@ -55,6 +55,8 @@ var command = function(actionSelect, typedObject, newUser){
     } else if (inputCheck === "double-level-up"){
       newUser.level += 2;
       return displayLevel(newUser);
+    } else if(inputCheck === "game-end"){
+      gameEnd();
     } else {
       return inputCheck;
     }
@@ -135,27 +137,9 @@ var userInputConversion = function(userObjectInput) {
 
 //front-end
 
-var frontEndFight = function(newUser, enemy) {
-  console.log(newUser);
-  console.log(enemy);
-  $("#user-hp").text(newUser.hp);
-  $("#enemy-hp").text(enemy.hp);
-  $(".fight-div").show();
-  $("#roll-for-damage").click(function(){
-    combat(newUser, enemy);
-    $("#user-hp").text(newUser.hp);
-    $("#enemy-hp").text(enemy.hp);
-    if(combatCheck(newUser, enemy) === true){
-      $(".fight-div").hide();
-      return displayLevel(newUser);
-    } else if(combatCheck(newUser, enemy) === false){
-      $(".fight-div").hide();
-      return "Game Over";
-    } else {
-      frontEndFight(newUser, enemy);
-    }
-  });
-};
+function gameEnd(){
+  $(".game-end").show();
+}
 
 $(document).ready(function() {
 
