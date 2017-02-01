@@ -1,4 +1,4 @@
-.game, .main-character-panel, .game-end {
+.game, .main-character-panel, .game-end, .game-row {
   display: none;
 }
 
@@ -20,6 +20,26 @@
 }
 
 .game-chat-box {
-  height: 800px;
+  height: 500px;
+  /*overflow-y: scroll;*/
+}
+
+.in-game-text {
+  height:100%;
   overflow-y: scroll;
+  flex:1;
+  display:flex;
+  flex-direction: column-reverse;
+}
+
+.text-object {
+  color:blue;
+}
+
+.text-enemy {
+  color:red;
+}
+
+.game-row {
+  height: 800px;
 }

@@ -4,6 +4,7 @@ var User = function(inputName){
   this.inventory = []
   this.hp = 100;
   this.level = 0;
+  this.str = 8;
 };
 
 Object.prototype.levelChange = function(condition) {
@@ -20,15 +21,20 @@ var randomNumberGenerator = function(min, max) {
 }
 
 var combat = function(newUser, enemy) {
-  var enemyDamage = randomNumberGenerator(1, 5);
-  var newUserDamage = randomNumberGenerator(5, 10);
-  console.log(enemy);
+  var newUserDamage;
+
+  if (newUser.inventory){
+    newUserDamage = randomNumberGenerator(5, 20);
+  }else{
+    newUserDamage = randomNumberGenerator(5, 10);
+  }
+  var enemyDamage = randomNumberGenerator(5, 10);
 
   enemy.hp -= newUserDamage;
   newUser.hp -= enemyDamage;
 
-  if (enemy.hp >= 0 && newUser.hp > 0) {
-    return "You have done " + newUserDamage +" to the" + enemy.enemyName + ". He has " + enemy.hp + " health left.";
+  if (enemy.hp > 0 && newUser.hp > 0) {
+    return "You have done " + newUserDamage +" damage to the " + enemy.enemyName + ". He has " + enemy.hp + " health left. <br> The " + enemy.enemyName + " has done " + enemyDamage + " damage to you.";
   } else if (newUser.hp <= 0) {
     return "You have died. Game over.";
   } else {
@@ -57,7 +63,11 @@ var command = function(actionSelect, typedObject, newUser){
       return displayLevel(newUser);
     } else if(inputCheck === "game-end"){
       gameEnd();
-    } else {
+    } else if(inputCheck === "add-to-inventory"){
+      newUser.inventory.push(typedObject)
+      newUser.str += 7;
+      return "You ate your " + typedObject + ". You feel powerful now."
+    }else{
       return inputCheck;
     }
   } catch(e) {
@@ -155,7 +165,7 @@ $(document).ready(function() {
     $(".name-output").text(newUser.userName);
     $("#in-game-text").append(displayLevel(newUser));
     $(".user-info").slideUp();
-    $(".game, .main-character-panel").slideDown();
+    $(".game, .main-character-panel, .game-row").slideDown();
 
     // actual gameplay with user input and game dialogue
     $("#user-input-text").submit(function(event) {
@@ -164,6 +174,7 @@ $(document).ready(function() {
       var userObjectInput = $("#user-object-input").val();
       var userActionSelect = $("#user-action-select option:selected").val();
       var convertInput = userInputConversion(userObjectInput);
+
 
       $("#in-game-text").append("<li> You " + userActionSelect + " " + userObjectInput + "</li>");
 
@@ -174,7 +185,8 @@ $(document).ready(function() {
       $(".name-output").text(newUser.userName);
 
       $(".user-hp").text(newUser.hp);
-      $('.game-chat-box').scrollTop($('.game-chat-box').height())
+      $(".strength").text(newUser.str);
+      $('.game-chat-box').scrollTop($('.game-chat-box').height());
 
 
     });

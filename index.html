@@ -18,63 +18,66 @@
         <div class="user-info jumbotron">
           <button type="button" class="start-btn btn" id="user-input">Enter Space</button>
         </div>
-        <div class="game col-md-6">
-          <div class="game-chat-box">
-            <ul id="in-game-text">
-            </ul>
-          </div>
-          <!-- where the user inputs the chat-text -->
-          <div class="user-object-input">
-            <form id="user-input-text">
-              <!-- action select -->
-              <div class="form-group col-xs-6">
-                <select class="form-control" id="user-action-select">
-                  <option value="check">look at</option>
-                  <option value="talk">talk</option>
-                  <option value="pickup">pick up</option>
-                  <option value="go">go</option>
-                  <option value="fight">fight</option>
-                  <option value="interact">interact</option>
-                </select>
+        <div class="row game-row">
+          <div class="game col-md-6">
+            <div class="game-chat-box">
+              <div class="in-game-text">
+                <ul id="in-game-text">
+                </ul>
               </div>
+            </div>
+            <!-- where the user inputs the chat-text -->
+            <div class="user-object-input">
+              <form id="user-input-text">
+                <!-- action select -->
+                <div class="form-group col-xs-6">
+                  <select class="form-control" id="user-action-select">
+                    <option value="check">look at</option>
+                    <option value="talk">talk</option>
+                    <option value="pickup">pick up</option>
+                    <option value="go">go</option>
+                    <option value="fight">fight</option>
+                    <option value="interact">interact</option>
+                  </select>
+                </div>
 
-              <!-- object input -->
-              <input type="text" id="user-object-input">
-              <button type="submit" name="chat">Send</button>
-            </form>
+                <!-- object input -->
+                <input type="text" id="user-object-input">
+                <button type="submit" name="chat">Send</button>
+              </form>
+            </div>
+          </div>
+
+
+  <!-- character info section -->
+          <div class="main-character-panel col-md-6">
+            <!-- stats and image -->
+            <div class="row row-one">
+              <h1 class="name-output"></h1>
+              <!-- stats -->
+              <div class="character-stats col-md-6">
+                <h3>HP: <span class="user-hp">100</span></h3>
+                <ul>
+                  <li>STR: <span class="strength">7</span></li>
+                  <li>DEX: 20</li>
+                  <li>INT: 12</li>
+                </ul>
+              </div>
+              <!-- character image -->
+              <div class="character-image col-md-6">
+                <img src="https://catchoocutiepie.files.wordpress.com/2015/04/hula-hoop.jpg?w=640" width="300px" class="character-one">
+              </div>
+            </div>
+
+            <!-- inventory -->
+            <!-- <div class="row row-three">
+              <div class="character-inventory col-md-12">
+                <h1>inventory goes here</h1>
+              </div>
+            </div> -->
           </div>
         </div>
-
-
-<!-- character info section -->
-        <div class="main-character-panel col-md-6">
-          <!-- stats and image -->
-          <div class="row row-one">
-            <h1 class="name-output"></h1>
-            <!-- stats -->
-            <div class="character-stats col-md-6">
-              <h3>HP: <span class="user-hp">100</span></h3>
-            </div>
-            <!-- character image -->
-            <div class="character-image col-md-6">
-              <img src="https://catchoocutiepie.files.wordpress.com/2015/04/hula-hoop.jpg?w=640" width="300px" class="character-one">
-
-            </div>
-          </div>
-          <!-- character bio -->
-          <div class="row row-two">
-            <div class="character-bio col-md-12">
-              <p class="character-one">Bio goes here</p>
-            </div>
-          </div>
-          <!-- inventory -->
-          <div class="row row-three">
-            <div class="character-inventory col-md-12">
-              <h1>inventory goes here</h1>
-            </div>
-          </div>
         </div>
-      </div>
       <div class="game-end game-end-div">
         <h1>You have saved the Turnips from the evil Foxes in Space Suits with Lasers! Congratulations. You win!</h1>
       </div>
