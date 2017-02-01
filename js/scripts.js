@@ -63,6 +63,7 @@ var command = function(actionSelect, typedObject, newUser){
       return displayLevel(newUser);
     } else if(inputCheck === "game-end"){
       gameEnd();
+      return "You have won the game!"
     } else if(inputCheck === "add-to-inventory"){
       newUser.inventory.push(typedObject)
       newUser.str += 7;
@@ -178,7 +179,7 @@ $(document).ready(function() {
 
       var append = command(userActionSelect, convertInput, newUser);
 
-      $("#in-game-text").append("<br><br>" + append);
+      $("#in-game-text").append("<br><br><p>" + append + "</p>");
       $("#user-object-input").val("");
       $(".name-output").text(newUser.userName);
 
