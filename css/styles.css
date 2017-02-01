@@ -19,6 +19,10 @@
   width: 15%;
 }
 
+li, p, body {
+  font-family: 'VT323', monospace;
+}
+
 .game-chat-box {
   height: 500px;
   /*overflow-y: scroll;*/

@@ -1,5 +1,3 @@
-//http://www.farlandworld.com/files/TowersofNight5e.pdf
-
 var levelArray = [];
 
 var Level = function(lev, desc, obj, enemy){
@@ -100,7 +98,7 @@ var zipper = new Object("zipper", "The zipper pull is hanging right below Le Lea
 
 var flee = new Object("flee", "Behind Le Leader du les Foxes is a clear path towards the forest, and behind you is a crowd of foxes.", "You won't be able to talk your way out of this situation!", "There is nothing in the area that might help you escape.", "You try to run, but a group of foxes block your path.", "You try fighting your way through, but there are too many foxes!", "You try running, but a group of foxes block your path!");
 
-var ship = new Object("ship", "The brand new ship modifications make it shine just like an KaratX90T!", "You pat your new ship and say, Thatta-boy", "You cannot lift your ship!", "game-end", "You don't want to fight this brand new ship", "game-end")
+var ship = new Object("ship", "The brand new ship modifications make it shine just like an KaratX90T!", "You pat your new ship and say, 'Good Karat...'", "You cannot lift your ship!", "game-end", "You don't want to fight this brand new ship", "game-end");
 
 // level thirteen
 var foxJail = new Object("fox jail", "Fox jail is a prison established 300 years ago by the founders of Fox City. The crime rate in Fox City is quite low, so it is not highly populated. However, the leaders of Fox City ensure the best guards patrol the prison.", "level-up", "You cannot lift a giant prison. What are you trying to do?", "You need to return the baby turnips to their parents!", "The foxes are no longer the bad guys.", "level-up");
