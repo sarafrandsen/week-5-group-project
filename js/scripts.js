@@ -129,7 +129,9 @@ var userInputConversion = function(userObjectInput) {
     return "foxJail";
   } else if (userObjectInput === "dinner") {
     return "dinner";
-  } else {
+  } else if (userObjectInput === "ship") {
+    return "ship";
+  } else{
     return "I don't understand what you mean."
   }
   return userObjectInput
