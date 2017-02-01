@@ -134,8 +134,9 @@ var userInputConversion = function(userObjectInput) {
   } else{
     return "I don't understand what you mean."
   }
-  return userObjectInput
+  return userObjectInput;
 };
+
 
 //front-end
 
@@ -165,7 +166,9 @@ $(document).ready(function() {
       var convertInput = userInputConversion(userObjectInput);
 
       $("#in-game-text").append("<li> You " + userActionSelect + " " + userObjectInput + "</li>");
+
       var append = command(userActionSelect, convertInput, newUser);
+
       $("#in-game-text").append(append);
       $("#user-object-input").val("");
       $(".name-output").text(newUser.userName);
