@@ -54,7 +54,7 @@ var bunk = new Object("bunk", "Your bed is a little lumpy, but the blankets are 
 // level four
 var levelFourButton = new Object("button", "This button will open the cockpit in any emergency", "You tell the button to open the cockpit, but you remember that you forgot to install voice control. Still on the to-do list...", "You try to pickup the button, but it's difficult and it doesn't work.", "You're already next to the button", "You try to smash the button, but you miss.", "level-up");
 
-var carrots = new Object("carrots", "Your carrots look a little beat up from the crash but still edible.", "You tell your carrots how sorry you are that they got beat up.", "You pick up your carrots and eat them.", "You walk towards your carrots and accidentally step on them.", "You throw your carrots at the wall and break them more.", "You eat your carrots but are still hungry.");
+var carrots = new Object("carrots", "Your carrots look a little beat up from the crash but still edible.", "You tell your carrots how sorry you are that they got beat up.", "You pick up your carrots and eat them.", "You walk towards your carrots and accidentally step on them.", "You throw your carrots at the wall and break them more.", "add-to-inventory");
 
 // level five
 var turnip = new Object ("turnip", "The turnip is about a foot tall and a foot wide. The stalks on its head are styled into a very fashionable 'hair-do'. Its torso is a lovely shade of purple.", "The turnip asks again for your help." , "The turnip is indignant that you picked it up. This is wildly offensive in turnip culture.", "Don't move! There is a fox with a laser pointed at you.", "The turnip bites your foot and insists the fox is the bad guy.", "The turnip asks for your help again!");
