@@ -34,9 +34,9 @@ var combat = function(newUser, enemy) {
   newUser.hp -= enemyDamage;
 
   if (enemy.hp > 0 && newUser.hp > 0) {
-    return "You have done " + newUserDamage +" damage to the " + enemy.enemyName + ". He has " + enemy.hp + " health left. <br> The " + enemy.enemyName + " has done " + enemyDamage + " damage to you.";
+    return "<p>You have done " + newUserDamage +" damage to the " + enemy.enemyName + ". He has " + enemy.hp + " health left. <br> The " + enemy.enemyName + " has done " + enemyDamage + " damage to you.</p>";
   } else if (newUser.hp <= 0) {
-    return "You have died. Game over.";
+    return "<p>You have died. Game over.</p>";
   } else {
     newUser.level += 1;
     return displayLevel(newUser);
@@ -63,16 +63,16 @@ var command = function(actionSelect, typedObject, newUser){
       return displayLevel(newUser);
     } else if(inputCheck === "game-end"){
       gameEnd();
-      return "You have won the game!"
+      return "<p>You have won the game!</p>"
     } else if(inputCheck === "add-to-inventory"){
       newUser.inventory.push(typedObject)
       newUser.str += 7;
-      return "You ate your " + typedObject + ". You feel powerful now."
+      return "<p>You ate your " + typedObject + ". You feel powerful now.</p>"
     }else{
       return inputCheck;
     }
   } catch(e) {
-    return "That is not an available choice."
+    return "<p>That is not an available choice.</p>"
   }
 }
 
