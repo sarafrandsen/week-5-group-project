@@ -148,6 +148,12 @@ var userInputConversion = function(userObjectInput) {
 };
 
 
+userInputConvert = function(input) {
+  if (input === "talk") {
+    return "talk to"
+  }
+}
+
 //front-end
 
 function gameEnd(){
@@ -174,9 +180,9 @@ $(document).ready(function() {
       var userObjectInput = $("#user-object-input").val();
       var userActionSelect = $("#user-action-select option:selected").val();
       var convertInput = userInputConversion(userObjectInput);
+      var actionOutput = userInputConvert(userActionSelect);
 
-
-      $("#in-game-text").append("<li> You " + userActionSelect + " " + userObjectInput + "</li>");
+      $("#in-game-text").append("<li> You " + actionOutput + " " + userObjectInput + "</li>");
 
       var append = command(userActionSelect, convertInput, newUser);
 
