@@ -7,13 +7,14 @@
 #FEAFA8- peach
 #FCF788 - yellow
 #FCDF92 - orange
+#FDF0CD
 */
 
 
 
 body, .jumbotron {
-  background-color: #323233;
-  color: #e8e8e8;
+  background-color: #221826;
+  color: #ecede6;
 }
 
 a {
@@ -26,8 +27,15 @@ a:hover {
   text-decoration: none;
 }
 
-.jumbotron {
+p {
+  font-family: 'VT323', monospace;
+  font-size: 30px;
+}
+
+.jumbotron, h1, h2 {
   text-align: center;
+  color: #ecede6;
+  font-family: 'Bahiana', cursive;
 }
 
 .game, .main-character-panel, .game-end, .game-row {
@@ -43,15 +51,16 @@ a:hover {
   left: 25%;
 }
 
-input, label, button {
-  color: #323233
-}
 
 .start-btn:hover {
-  background-color: #707070;
+  background-color: #423147;
   border-radius: 5px;
 }
 
+
+img {
+  max-width: 80%;
+}
 
 .user-info {
   height: 30vh
@@ -60,6 +69,13 @@ input, label, button {
 .btn, .form-control {
   width: 100%;
   margin-top: 10%;
+  background-color: #221826;
+  color: #f76d47;
+  border: 1px solid #ecede6;
+}
+
+.btn:hover {
+  color: #ecede6;
 }
 
 .start-btn {
@@ -85,7 +101,7 @@ input, label, button {
 }
 
 .in-game-text::-webkit-scrollbar {
-  background-color: #323233;
+  background-color: #221826;
 }
 
 .in-game-text {
@@ -98,7 +114,7 @@ input, label, button {
 }
 
 .text-object {
-  color: #e8aa5f;
+  color: #c68631;
 }
 
 .text-enemy {
