@@ -96,11 +96,11 @@ var userInputConversion = function(userObjectInput) {
     return "north";
   } else if (userObjectInput === "south") {
     return "south";
-  } else if (userObjectInput === "switch") {
+  } else if (userObjectInput === "emergency switch") {
     return "levelThreeButton";
   } else if (userObjectInput === "bunk") {
     return "bunk";
-  } else if (userObjectInput === "button") {
+  } else if (userObjectInput === "emergency button") {
     return "levelFourButton";
   } else if (userObjectInput === "carrots") {
     return "carrots";
