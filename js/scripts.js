@@ -179,7 +179,7 @@ $(document).ready(function() {
 
       var append = command(userActionSelect, convertInput, newUser);
 
-      $("#in-game-text").append("<br><br><p>" + append + "</p>");
+      $("#in-game-text").append("<p><br>" + append + "</p>");
       $("#user-object-input").val("");
       $(".name-output").text(newUser.userName);
 
