@@ -33,7 +33,7 @@ var combat = function(newUser, enemy) {
   enemy.hp -= newUserDamage;
   newUser.hp -= enemyDamage;
 
-  if (enemy.hp >= 0 && newUser.hp > 0) {
+  if (enemy.hp > 0 && newUser.hp > 0) {
     return "You have done " + newUserDamage +" damage to the " + enemy.enemyName + ". He has " + enemy.hp + " health left. <br> The " + enemy.enemyName + " has done " + enemyDamage + " damage to you.";
   } else if (newUser.hp <= 0) {
     return "You have died. Game over.";
@@ -164,7 +164,7 @@ $(document).ready(function() {
     $(".name-output").text(newUser.userName);
     $("#in-game-text").append(displayLevel(newUser));
     $(".user-info").slideUp();
-    $(".game, .main-character-panel").slideDown();
+    $(".game, .main-character-panel, .game-row").slideDown();
 
     // actual gameplay with user input and game dialogue
     $("#user-input-text").submit(function(event) {
@@ -183,7 +183,7 @@ $(document).ready(function() {
 
       $(".user-hp").text(newUser.hp);
       $(".strength").text(newUser.str);
-      $('.game-chat-box').scrollTop($('.game-chat-box').height())
+      $('.game-chat-box').scrollTop($('.game-chat-box').height());
 
 
     });
