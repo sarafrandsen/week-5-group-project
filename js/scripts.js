@@ -134,12 +134,12 @@ var userInputConversion = function(userObjectInput) {
     return "leader";
   } else if (userObjectInput === "zipper") {
     return "zipper";
-  } else if (userObjectInput === "flee") {
-    return "flee";
+  } else if (userObjectInput === "outside") {
+    return "outside";
   } else if (userObjectInput === "fox jail") {
     return "foxJail";
-  } else if (userObjectInput === "dinner") {
-    return "dinner";
+  } else if (userObjectInput === "pot") {
+    return "pot";
   } else if (userObjectInput === "ship") {
     return "ship";
   } else{
