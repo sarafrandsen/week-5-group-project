@@ -89,8 +89,8 @@ var displayLevel = function(newUser) {
 var userInputConversion = function(userObjectInput) {
   if (userObjectInput === "planet"){
     return "planet";
-  } else if (userObjectInput === "ignore") {
-    return "ignore";
+  } else if (userObjectInput === "space radio") {
+    return "radio";
   } else if (userObjectInput === "north") {
     return "north";
   } else if (userObjectInput === "south") {
