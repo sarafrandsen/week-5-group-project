@@ -59,9 +59,10 @@ var command = function(actionSelect, typedObject, newUser){
     } else if(inputCheck === "game-end"){
       gameEnd();
       return "<p>You have won the game!</p>"
-    } else if(inputCheck === "add-to-inventory"){
+    } else if (inputCheck === "add-to-inventory"){
       newUser.inventory.push(typedObject)
       newUser.str += 7;
+      carrotPowerUp(newUser);
       return "<p>You ate your " + typedObject + ". You feel powerful now.</p>"
     }else{
       return inputCheck;
@@ -147,6 +148,19 @@ var userInputConversion = function(userObjectInput) {
 
 //front-end
 
+function fightMode(newUser) {
+  $(".game-chat-box").hide();
+  $(".user-hp").hide();
+  $(".game-chat-box").fadeIn();
+  $(".user-hp").fadeIn();
+  $(".user-hp").text(newUser.hp);
+};
+
+function carrotPowerUp(newUser){
+  $(".strength").hide();
+  $(".strength").fadeIn();
+  $(".strength").text(newUser.str);
+}
 function gameEnd(){
   $(".game-end").slideDown();
 }
@@ -160,7 +174,7 @@ $(document).ready(function() {
   // name and character selection
   $("#user-input").click(function(){
 
-    var inputName = "Riley, Space Rabbit Extraordinaire";
+    var inputName = "";
     var newUser = new User(inputName);
 
     $("#in-game-text").append(displayLevel(newUser));
@@ -174,17 +188,17 @@ $(document).ready(function() {
       var userObjectInput = $("#user-object-input").val();
       var userActionSelect = $("#user-action-select option:selected").val();
       var convertInput = userInputConversion(userObjectInput);
-      var testVariable = eval(convertInput + ".level")
-      if (testVariable === newUser.level) {
+      var testVariable = eval(convertInput + ".level");
 
+      if (testVariable === newUser.level) {
+        if (userActionSelect === "fight" && (convertInput === "leader" || convertInput === "fox")) {
+          fightMode(newUser);
+        };
         var append = command(userActionSelect, convertInput, newUser);
 
         $("#in-game-text").append("<p><br>" + append + "</p>");
         $("#user-object-input").val("");
-        $(".name-output").text(newUser.userName);
 
-        $(".user-hp").text(newUser.hp);
-        $(".strength").text(newUser.str);
         $('.game-chat-box').scrollTop($('.game-chat-box').height());
       } else {
         $("#in-game-text").append("<p><br>That is not an available selection at this time.</p>");
