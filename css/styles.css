@@ -171,3 +171,11 @@ img {
 .game-row {
   height: 800px;
 }
+
+.img-placeholder {
+  display: none;
+}
+
+/*.img-two-placeholder {
+  display: none;
+}*/

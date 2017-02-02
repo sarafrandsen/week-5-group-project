@@ -150,6 +150,9 @@ function gameEnd(){
   $(".game-end").slideDown();
 }
 
+
+
+
 $(document).ready(function() {
 
   // name and character selection
@@ -181,12 +184,23 @@ $(document).ready(function() {
         $(".user-hp").text(newUser.hp);
         $(".strength").text(newUser.str);
         $('.game-chat-box').scrollTop($('.game-chat-box').height());
+
+        var imageGen = function () {
+          if (newUser.level === 1) {
+            $(".text-placeholder").fadeOut(function() {
+              $(".img-placeholder").fadeIn();
+            });
+          };
+        };
+
+        imageGen()
+
       } else {
         $("#in-game-text").append("<p><br>That is not an available selection at this time.</p>");
       }
-
     });
   });
+
   $(".end-btn").click(function(){
     location.reload();
   });
