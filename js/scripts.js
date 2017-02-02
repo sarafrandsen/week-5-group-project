@@ -7,12 +7,6 @@ var User = function(inputName){
   this.str = 8;
 };
 
-Object.prototype.levelChange = function(condition) {
-  if (condition) {
-    newUser.level++
-  } else {
-  }
-}
 
 var randomNumberGenerator = function(min, max) {
   min = Math.ceil(min);
@@ -161,10 +155,9 @@ $(document).ready(function() {
   // name and character selection
   $("#user-input").click(function(){
 
-    var inputName = $("#user-name-input").val();
+    var inputName = "Riley, Space Rabbit Extraordinaire";
     var newUser = new User(inputName);
 
-    $(".name-output").text(newUser.userName);
     $("#in-game-text").append(displayLevel(newUser));
     $(".user-info").slideUp();
     $(".game, .main-character-panel, .game-row").slideDown();
@@ -176,17 +169,21 @@ $(document).ready(function() {
       var userObjectInput = $("#user-object-input").val();
       var userActionSelect = $("#user-action-select option:selected").val();
       var convertInput = userInputConversion(userObjectInput);
+      var testVariable = eval(convertInput + ".level")
+      if (testVariable === newUser.level) {
 
-      var append = command(userActionSelect, convertInput, newUser);
+        var append = command(userActionSelect, convertInput, newUser);
 
-      $("#in-game-text").append("<p><br>" + append + "</p>");
-      $("#user-object-input").val("");
-      $(".name-output").text(newUser.userName);
+        $("#in-game-text").append("<p><br>" + append + "</p>");
+        $("#user-object-input").val("");
+        $(".name-output").text(newUser.userName);
 
-      $(".user-hp").text(newUser.hp);
-      $(".strength").text(newUser.str);
-      $('.game-chat-box').scrollTop($('.game-chat-box').height());
-
+        $(".user-hp").text(newUser.hp);
+        $(".strength").text(newUser.str);
+        $('.game-chat-box').scrollTop($('.game-chat-box').height());
+      } else {
+        $("#in-game-text").append("<p><br>That is not an available selection at this time.</p>");
+      }
 
     });
   });
