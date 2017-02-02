@@ -17,9 +17,9 @@ var randomNumberGenerator = function(min, max) {
 var combat = function(newUser, enemy) {
   var newUserDamage;
 
-  if (newUser.inventory){
+  if (newUser.inventory[0] === "carrots"){
     newUserDamage = randomNumberGenerator(5, 20);
-  }else{
+  } else {
     newUserDamage = randomNumberGenerator(5, 10);
   }
   var enemyDamage = randomNumberGenerator(5, 10);
@@ -147,7 +147,7 @@ var userInputConversion = function(userObjectInput) {
 //front-end
 
 function gameEnd(){
-  $(".game-end").show();
+  $(".game-end").slideDown();
 }
 
 $(document).ready(function() {
@@ -186,6 +186,9 @@ $(document).ready(function() {
       }
 
     });
+  });
+  $(".end-btn").click(function(){
+    location.reload();
   });
 
 
