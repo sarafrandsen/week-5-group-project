@@ -226,7 +226,7 @@ $(document).ready(function() {
           $("#in-game-text").append("<p><br>That is not an available selection at this time.</p>");
         }
       } catch(e) {
-        $("#in-game-text").append("<p>That is not an available choice.</p>");
+        $("#in-game-text").append("<p><br>That is not an available choice.</p>");
       }
     });
   });
