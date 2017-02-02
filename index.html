@@ -15,93 +15,86 @@
     <div class="jumbotron">
       <h1><a href="index.html">Riley's Space Adventure</a></h1>
     </div>
-<!-- game -->
-      <div class="container-fluid">
-        <div class="user-info row">
-          <div class="col-sm-6 start-column">
-            <button type="button" class="start-btn" id="user-input"></button>
-            <h2>Click the rocket to start!</h2>
-          </div>
-          <div class="col-sm-6">
-            <h2>Instructions</h2>
-            <p class="instructions">Your adventuring as Riley, Space Rabbit Extraodinaire! To navigate through the story, use the drop down to choose an action and then type in the selected <span class="text-object">[object]</span> and hit send! And that's it!</p>
-          </div>
-
+    <!-- game -->
+    <div class="container-fluid">
+      <div class="user-info row">
+        <div class="col-sm-6 start-column">
+          <button type="button" class="start-btn" id="user-input"></button>
+          <h2>Click the rocket to start!</h2>
         </div>
-        <div class="row game-row">
-          <div class="game col-md-6">
-            <div class="game-chat-box">
-              <div class="in-game-text">
-                <ul id="in-game-text">
-                </ul>
+        <div class="col-sm-6">
+          <h2>Instructions</h2>
+          <p class="instructions">You are adventuring as Riley, Space Rabbit Extraodinaire! To navigate through the story, use the drop down to choose an action and then type in the selected <span class="text-object">[object]</span> and hit send! And that's it!</p>
+        </div>
+
+      </div>
+      <div class="row game-row">
+        <div class="game col-md-6">
+          <div class="game-chat-box">
+            <div class="in-game-text">
+              <ul id="in-game-text">
+              </ul>
+            </div>
+          </div>
+          <!-- where the user inputs the chat-text -->
+          <div class="user-object-input">
+            <form id="user-input-text">
+              <!-- action select -->
+              <div class="row">
+                <div class="col-xs-4">
+                  <select class="form-control" id="user-action-select">
+                    <option value="check">look at</option>
+                    <option value="talk">talk</option>
+                    <option value="pickup">pick up</option>
+                    <option value="go">go</option>
+                    <option value="fight">fight</option>
+                    <option value="interact">interact</option>
+                  </select>
+                </div>
+                <div class="col-xs-4">
+                  <input type="text" id="user-object-input" class="form-control">
+                </div>
+                <div class="col-xs-4">
+                  <button type="submit" name="chat" class="btn">Send</button>
+                </form>
               </div>
             </div>
-            <!-- where the user inputs the chat-text -->
-            <div class="user-object-input">
-              <form id="user-input-text">
-                <!-- action select -->
-                  <div class="row">
-                    <div class="col-xs-4">
-                      <select class="form-control" id="user-action-select">
-                        <option value="check">look at</option>
-                        <option value="talk">talk</option>
-                        <option value="pickup">pick up</option>
-                        <option value="go">go</option>
-                        <option value="fight">fight</option>
-                        <option value="interact">interact</option>
-                      </select>
-                    </div>
-                    <div class="col-xs-4">
-                      <input type="text" id="user-object-input" class="form-control">
-                    </div>
-                    <div class="col-xs-4">
-                      <button type="submit" name="chat" class="btn">Send</button>
-                    </form>
-                    </div>
-                  </div>
-            </div>
           </div>
+        </div>
 
 
-  <!-- character info section -->
-          <div class="main-character-panel col-md-6">
+        <!-- character info section -->
+        <div class="col-md-6">
+          <div class="row character-row-top">
             <!-- stats and image -->
-            <div class="row row-one">
-              <h1 class="name-output"></h1>
+            <div class="main-character-panel col-md-6">
               <!-- stats -->
               <div class="character-stats col-md-6">
-                <h3>HP: <span class="user-hp">100</span></h3>
+                <p>HP: <span class="user-hp">100</span></p>
                 <ul>
                   <li>STR: <span class="strength">7</span></li>
                   <li>DEX: 20</li>
                   <li>INT: 12</li>
                 </ul>
               </div>
-              <!-- character image -->
-              <div class="character-image col-md-6">
-                <img src="img/riley-main.jpg">
-              </div>
+            </div>
+          <!-- character image -->
+            <div="col-md-6">
+              <img class="character-image"  src="img/riley-main.gif">
             </div>
             <div class="row">
-              <div class="col-md-12">
-                <div class="img-placeholder">
-                  <img src="img/riley-turnip-fox.jpg">
-                </div>
-
-              </div>
+              <div="col-md-12">
+              <img class="img-placeholder" src="img/riley-turnip-fox.gif">
             </div>
-
-            <!-- inventory -->
-            <!-- <div class="row row-three">
-              <div class="character-inventory col-md-12">
-                <h1>inventory goes here</h1>
-              </div>
-            </div> -->
+          </div>
+          <!-- chapter images -->
           </div>
         </div>
-        </div>
-      <div class="game-end game-end-div">
-        <h1>You have saved the Turnips from the evil Foxes in Space Suits with Lasers! Congratulations. You win!</h1>
       </div>
-  </body>
+    </div>
+    <!-- game end -->
+    <div class="game-end game-end-div">
+      <h1>You have saved the Turnips from the evil Foxes in Space Suits with Lasers! Congratulations. You win!</h1>
+    </div>
+</body>
 </html>

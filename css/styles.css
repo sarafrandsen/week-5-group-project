@@ -10,17 +10,13 @@
 #FDF0CD
 */
 
-/*.img-placeholder {
-  background-color: orange;
-  height: 250px;
-  width: 500px;
-  float: right;
-  margin-right: -15px;
+.img-placeholder {
+  width: 100%;
 }
 
 .character-image {
-  background-color: green;
-}*/
+  width: 50%;
+}
 
 .jumbotron {
   padding-top: 5%;
@@ -36,11 +32,11 @@ body, .jumbotron {
 }
 
 .container-fluid {
-  margin: 0 5% 0 5%;
+  padding: 0 5% 0 5%;
 }
 
 .character-stats {
-
+ width: 100%
 }
 
 a {
@@ -83,15 +79,6 @@ a:hover {
   border-radius: 5px;
 }
 
-
-img {
-  max-width: 80%;
-}
-
-.user-info {
-  height: 30vh
-}
-
 .btn, .form-control {
   width: 100%;
   margin-top: 10%;
@@ -115,14 +102,25 @@ img {
   border: none;
 }
 
-.in-game-text, .character-stats {
+.in-game-text{
   font-family: 'VT323', monospace;
   font-size: 20px;
   text-align: left;
 }
-
+.character-stats, .user-hp {
+ font-family: 'VT323', monospace;
+ font-size: 45px;
+}
+.character-row-top {
+  border: 6px solid white;
+  border-radius: 25px;
+  height: 80%;
+}
 .game-chat-box {
   height: 500px;
+  border: 6px solid white;
+  border-radius: 25px;
+  padding: 5px;
   /*overflow-y: scroll;*/
 }
 
