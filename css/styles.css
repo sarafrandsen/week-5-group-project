@@ -176,3 +176,9 @@ a:hover {
   display: none;
   width: 100%;
 }
+
+#statement {
+  margin-top: 5%;
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+}
