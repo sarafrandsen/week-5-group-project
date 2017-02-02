@@ -57,6 +57,7 @@ var command = function(actionSelect, typedObject, newUser){
       newUser.level += 2;
       return displayLevel(newUser);
     } else if(inputCheck === "game-end"){
+      newUser.level += 1;
       gameEnd();
       return "<p>You have won the game!</p>"
     } else if (inputCheck === "add-to-inventory"){
@@ -139,7 +140,7 @@ var userInputConversion = function(userObjectInput) {
   } else if (userObjectInput === "ship") {
     return "ship";
   } else{
-    return "I don't understand what you mean."
+    return "<p>I don't understand what you mean.</p>"
   }
   return userObjectInput;
 };
@@ -173,10 +174,10 @@ var imageGen = function(newUser) {
   if (newUser.level === 1) {
     $("#statement").fadeIn();
   } else if (newUser.level === 4) {
-     $("#statement").fadeOut();
+     $("#statement").hide();
      $("#img1").fadeIn();
-  } else if (newUser.level === 15) {
-    $("#img1").fadeOut();
+  } else if (newUser.level === 14) {
+    $("#img1").hide();
     $("#img2").fadeIn();
   } else {
 
@@ -205,23 +206,27 @@ $(document).ready(function() {
       var userObjectInput = $("#user-object-input").val();
       var userActionSelect = $("#user-action-select option:selected").val();
       var convertInput = userInputConversion(userObjectInput);
-      var testVariable = eval(convertInput + ".level");
+      try {
+        var testVariable = eval(convertInput + ".level");
 
-      if (testVariable === newUser.level) {
-        if (userActionSelect === "fight" && (convertInput === "leader" || convertInput === "fox")) {
-          fightMode(newUser);
-        };
-        var append = command(userActionSelect, convertInput, newUser);
+        if (testVariable === newUser.level) {
+          if (userActionSelect === "fight" && (convertInput === "leader" || convertInput === "fox")) {
+            fightMode(newUser);
+          };
+          var append = command(userActionSelect, convertInput, newUser);
 
-        $("#in-game-text").append("<p><br>" + append + "</p>");
-        $("#user-object-input").val("");
+          $("#in-game-text").append("<p><br>" + append + "</p>");
+          $("#user-object-input").val("");
 
-        $('.game-chat-box').scrollTop($('.game-chat-box').height());
-        imageGen(newUser);
+          $('.game-chat-box').scrollTop($('.game-chat-box').height());
+          imageGen(newUser);
 
 
-      } else {
-        $("#in-game-text").append("<p><br>That is not an available selection at this time.</p>");
+        } else {
+          $("#in-game-text").append("<p><br>That is not an available selection at this time.</p>");
+        }
+      } catch(e) {
+        $("#in-game-text").append("<p>That is not an available choice.</p>");
       }
     });
   });
