@@ -10,7 +10,28 @@
 #FDF0CD
 */
 
+.img-placeholder {
+  background-color: orange;
+  height: 250px;
+  width: 500px;
+  float: right;
+  margin-right: -15px;
+}
 
+.character-image {
+  background-color: green;
+  height: 250px;
+  width: 250px;
+  float: right;
+}
+
+.jumbotron {
+  padding-top: 5%;
+  background-image: url(../img/planet.png);
+  background-size: 150px, 150px;
+  background-repeat: no-repeat;
+  background-position: 80%, 5%;
+}
 
 body, .jumbotron {
   background-color: #221826;
@@ -22,7 +43,7 @@ body, .jumbotron {
 }
 
 .character-stats {
-  padding-left: 25%;
+
 }
 
 a {
