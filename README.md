@@ -1,5 +1,5 @@
 # Riley's Space Adventure
-## By Sara Frandzen, Keely Silva-Glenn, Renee Mei, Lawrence Eby
+## By Sara Frandsen, Keely Silva-Glenn, Renee Mei, Lawrence Eby
 
 # Description
 
@@ -48,7 +48,7 @@ The enemy has done 5 damage to you.
 
 MIT License
 
-Copyright (c) 2017 Sara Frandzen, Keely Silva-Glenn, Renee Mei, Lawrence Eby
+Copyright (c) 2017 Sara Frandsen, Keely Silva-Glenn, Renee Mei, Lawrence Eby
 All Rights Reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
