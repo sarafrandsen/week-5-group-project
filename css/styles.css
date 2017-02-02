@@ -10,7 +10,7 @@
 #FDF0CD
 */
 
-.img-placeholder {
+/*.img-placeholder {
   background-color: orange;
   height: 250px;
   width: 500px;
@@ -20,10 +20,7 @@
 
 .character-image {
   background-color: green;
-  height: 250px;
-  width: 250px;
-  float: right;
-}
+}*/
 
 .jumbotron {
   padding-top: 5%;
