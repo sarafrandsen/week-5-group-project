@@ -30,7 +30,8 @@ var combat = function(newUser, enemy) {
   if (enemy.hp > 0 && newUser.hp > 0) {
     return "<p>You have done " + newUserDamage +" damage to the " + enemy.enemyName + ". He has " + enemy.hp + " health left. <br> The " + enemy.enemyName + " has done " + enemyDamage + " damage to you.</p>";
   } else if (newUser.hp <= 0) {
-    return "<p>You have died. Game over.</p>";
+    gameOver();
+    return "Game over!"
   } else {
     newUser.level += 1;
     return displayLevel(newUser);
@@ -148,6 +149,10 @@ var userInputConversion = function(userObjectInput) {
 
 function gameEnd(){
   $(".game-end").slideDown();
+}
+
+function gameOver(){
+  $(".game-over").slideDown();
 }
 
 $(document).ready(function() {

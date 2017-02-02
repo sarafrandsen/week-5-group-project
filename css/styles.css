@@ -64,7 +64,7 @@ a:hover {
   font-family: 'Bahiana', cursive;
 }
 
-.game, .main-character-panel, .game-end, .game-row {
+.game, .main-character-panel, .game-end, .game-row, .game-over {
   display: none;
 }
 .game {
