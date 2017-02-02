@@ -11,104 +11,96 @@
   <script src="js/scripts.js" charset="utf-8"></script>
   <title>Riley's Space Adventure</title>
 </head>
-<body>
-  <div class="jumbotron">
-    <h1><a href="index.html">Riley's Space Adventure</a></h1>
-  </div>
-  <!-- game -->
-  <div class="container-fluid">
-    <div class="user-info row">
-      <div class="col-sm-6 start-column">
-        <button type="button" class="start-btn" id="user-input"></button>
-        <h2>Click the rocket to start!</h2>
-          </div>
-          <div class="col-sm-6">
-            <h2>Instructions</h2>
-            <p class="instructions">You are adventuring as Riley, Space Rabbit Extraodinaire! To navigate through the story, use the drop down to choose an action and then type in the selected <span class="text-object">[object]</span> and hit send! And that's it!</p>
-          </div>
-        </div>
-        </div>
-        <div class="row game-row">
-          <div class="game col-md-6">
-            <div class="game-chat-box">
-              <div class="in-game-text">
-                <ul id="in-game-text">
-                </ul>
-              </div>
+  <body>
+    <div class="jumbotron">
+      <h1><a href="index.html">Riley's Space Adventure</a></h1>
+    </div>
+    <!-- game -->
+    <div class="container">
+      <div class="user-info row">
+        <div class="col-sm-6 start-column">
+          <button type="button" class="start-btn" id="user-input"></button>
+          <h2>Click the rocket to start!</h2>
             </div>
-            <!-- where the user inputs the chat-text -->
-            <div class="user-object-input">
-              <form id="user-input-text">
-                <!-- action select -->
-                <div class="row">
-                  <div class="col-xs-4">
-                    <select class="form-control" id="user-action-select">
-                      <option value="check">look at</option>
-                      <option value="talk">talk</option>
-                      <option value="pickup">pick up</option>
-                      <option value="go">go</option>
-                      <option value="fight">fight</option>
-                      <option value="interact">interact</option>
-                    </select>
-                  </div>
-                  <div class="col-xs-4">
-                    <input type="text" id="user-object-input" class="form-control">
-                  </div>
-                  <div class="col-xs-4">
-                    <button type="submit" name="chat" class="btn">Send</button>
-                  </form>
-                </div>
-              </div>
+            <div class="col-sm-6">
+              <h2>Instructions</h2>
+              <p class="instructions">You are adventuring as Riley, Space Rabbit Extraodinaire! To navigate through the story, use the drop down to choose an action and then type in the selected <span class="text-object">[object]</span> and hit send! And that's it!</p>
             </div>
           </div>
-
-
-          <!-- character info section -->
-          <div class="col-md-6">
-            <div class="row character-row-top">
-              <!-- stats and image -->
-              <div class="main-character-panel col-md-6">
-                <!-- stats -->
-                <div class="character-stats col-md-6">
-                  <p>HP: <span class="user-hp">100</span></p>
-                  <ul>
-                    <li>STR: <span class="strength">8</span></li>
-                    <li>DEX: 20</li>
-                    <li>INT: 12</li>
+          <div class="row game-row">
+            <div class="game col-md-6">
+              <div class="game-chat-box">
+                <div class="in-game-text">
+                  <ul id="in-game-text">
                   </ul>
                 </div>
               </div>
-              <!-- character image -->
-              <div="col-md-6">
-              <img class="character-image"  src="img/riley-main.gif">
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="fade-in-placement">
-                  <p id="statement"> This is some text that will show until the picture!</p>
-                  <img id="img1" src="img/riley-turnip-fox.gif">
-                  <img id="img2" src="img/carrot-rocket.gif">
+              <!-- where the user inputs the chat-text -->
+              <div class="user-object-input">
+                <form id="user-input-text">
+                  <!-- action select -->
+                  <div class="row">
+                    <div class="col-xs-4">
+                      <select class="form-control" id="user-action-select">
+                        <option value="check">look at</option>
+                        <option value="talk">talk</option>
+                        <option value="pickup">pick up</option>
+                        <option value="go">go</option>
+                        <option value="fight">fight</option>
+                        <option value="interact">interact</option>
+                      </select>
+                    </div>
+                    <div class="col-xs-4">
+                      <input type="text" id="user-object-input" class="form-control">
+                    </div>
+                    <div class="col-xs-4">
+                      <button type="submit" name="chat" class="btn">Send</button>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
 
+            <!-- character info section -->
+            <div class="col-md-6 character-div">
+              <div class="row character-row-top">
+                <!-- stats and image -->
+                <div class="main-character-panel col-md-6">
+                  <!-- stats -->
+                  <div class="character-stats col-md-6">
+                    <p>HP: <span class="user-hp">100</span></p>
+                    <ul>
+                      <li>STR: <span class="strength">8</span></li>
+                      <li>DEX: 20</li>
+                      <li>INT: 12</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- character image -->
+                <div="col-md-6">
+                  <img class="character-image"  src="img/riley-main.gif">
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="fade-in-placement">
+                    <p id="statement"> This is some text that will show until the picture!</p>
+                    <img id="img1" src="img/riley-turnip-fox.gif">
+                    <img id="img2" src="img/carrot-rocket.gif">
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-
-        </div>
-
         </div>
       </div>
+      <div class="game-end game-end-div">
+        <h1>You have saved the Turnips from the evil Foxes in Space Suits with Lasers! Congratulations. You win!</h1>
+        <button type="button" name="button" class="end-btn">Play Again</button>
+      </div>
+      <div class="game-over game-end-div">
+        <h1>You have fainted! Game Over.</h1>
+        <button type="button" name="button" class="end-btn">Play Again</button>
+      </div>
     </div>
-    <div class="game-end game-end-div">
-      <h1>You have saved the Turnips from the evil Foxes in Space Suits with Lasers! Congratulations. You win!</h1>
-      <button type="button" name="button" class="end-btn">Play Again</button>
-
-    </div>
-    <div class="game-over game-end-div">
-      <h1>You have fainted! Game Over.</h1>
-      <button type="button" name="button" class="end-btn">Play Again</button>
-
-    </div>
-  </div>
-</body>
+  </body>
 </html>
