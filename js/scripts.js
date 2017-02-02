@@ -150,7 +150,19 @@ function gameEnd(){
   $(".game-end").slideDown();
 }
 
+var imageGen = function(newUser) {
+  if (newUser.level === 1) {
+    $("#statement").fadeIn();
+  } else if (newUser.level === 4) {
+     $("#statement").fadeOut();
+     $("#img1").fadeIn();
+  } else if (newUser.level === 15) {
+    $("#img1").fadeOut();
+    $("#img2").fadeIn();
+  } else {
 
+  }
+};
 
 
 $(document).ready(function() {
@@ -164,6 +176,8 @@ $(document).ready(function() {
     $("#in-game-text").append(displayLevel(newUser));
     $(".user-info").slideUp();
     $(".game, .main-character-panel, .game-row").slideDown();
+
+    imageGen(newUser);
 
     // actual gameplay with user input and game dialogue
     $("#user-input-text").submit(function(event) {
@@ -184,16 +198,8 @@ $(document).ready(function() {
         $(".user-hp").text(newUser.hp);
         $(".strength").text(newUser.str);
         $('.game-chat-box').scrollTop($('.game-chat-box').height());
+        imageGen(newUser);
 
-        var imageGen = function () {
-          if (newUser.level === 1) {
-            $(".text-placeholder").fadeOut(function() {
-              $(".img-placeholder").fadeIn();
-            });
-          };
-        };
-
-        imageGen()
 
       } else {
         $("#in-game-text").append("<p><br>That is not an available selection at this time.</p>");

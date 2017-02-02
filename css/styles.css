@@ -172,10 +172,10 @@ img {
   height: 800px;
 }
 
-.img-placeholder {
+#img1 {
   display: none;
 }
 
-/*.img-two-placeholder {
+#img2 {
   display: none;
-}*/
+}
