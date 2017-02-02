@@ -17,9 +17,9 @@ var randomNumberGenerator = function(min, max) {
 var combat = function(newUser, enemy) {
   var newUserDamage;
 
-  if (newUser.inventory){
+  if (newUser.inventory[0] === "carrots"){
     newUserDamage = randomNumberGenerator(5, 20);
-  }else{
+  } else {
     newUserDamage = randomNumberGenerator(5, 10);
   }
   var enemyDamage = randomNumberGenerator(5, 10);
@@ -30,7 +30,8 @@ var combat = function(newUser, enemy) {
   if (enemy.hp > 0 && newUser.hp > 0) {
     return "<p>You have done " + newUserDamage +" damage to the " + enemy.enemyName + ". He has " + enemy.hp + " health left. <br> The " + enemy.enemyName + " has done " + enemyDamage + " damage to you.</p>";
   } else if (newUser.hp <= 0) {
-    return "<p>You have died. Game over.</p>";
+    gameOver();
+    return "Game over!"
   } else {
     newUser.level += 1;
     return displayLevel(newUser);
@@ -147,7 +148,11 @@ var userInputConversion = function(userObjectInput) {
 //front-end
 
 function gameEnd(){
-  $(".game-end").show();
+  $(".game-end").slideDown();
+}
+
+function gameOver(){
+  $(".game-over").slideDown();
 }
 
 $(document).ready(function() {
@@ -186,6 +191,9 @@ $(document).ready(function() {
       }
 
     });
+  });
+  $(".end-btn").click(function(){
+    location.reload();
   });
 
 
