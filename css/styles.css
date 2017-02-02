@@ -65,15 +65,20 @@ a:hover {
 }
 
 .game-end-div {
-  padding-top: 10%;
   float: right;
   position: absolute;
   left: 15%;
   top: 25%;
   text-align: center;
-  background-color: #ffa100;
-  height: 50%;
+  background-color: #c68631;
   width: 50%;
+  border: 6px solid white;
+  border-radius: 25px;
+  padding: 8% 5% 5% 5%;
+}
+
+.bigger-text {
+  font-size: 40px;
 }
 
 .end-btn {
