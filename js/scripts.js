@@ -127,7 +127,7 @@ var userInputConversion = function(userObjectInput) {
     return "microphone";
   } else if (userObjectInput === "boiling water") {
     return "boilingWater";
-  } else if (userObjectInput === "Leader") {
+  } else if (userObjectInput === "leader") {
     return "leader";
   } else if (userObjectInput === "zipper") {
     return "zipper";
@@ -203,7 +203,7 @@ $(document).ready(function() {
     $("#user-input-text").submit(function(event) {
       event.preventDefault();
 
-      var userObjectInput = $("#user-object-input").val();
+      var userObjectInput = $("#user-object-input").val().toLowerCase();
       var userActionSelect = $("#user-action-select option:selected").val();
       var convertInput = userInputConversion(userObjectInput);
       try {
@@ -226,7 +226,7 @@ $(document).ready(function() {
           $("#in-game-text").append("<p><br>That is not an available selection at this time.</p>");
         }
       } catch(e) {
-        $("#in-game-text").append("<p><br>That is not an available choice.</p>");
+        $("#in-game-text").append("<p>That is not an available choice.</p>");
       }
     });
   });
